@@ -5,6 +5,8 @@
   }
 
 /*== Customization ==*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&display=swap');
+
 body {
 	overflow-x: hidden;
 	font-family: 'acumin-pro', 'Franklin Gothic', sans-serif;
@@ -12,11 +14,13 @@ body {
 	line-height: 1.875rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'United Sans', Impact, sans-serif;
+h2, h3, h4, h5, h6 {
+	font-family: 'acumin-pro-semi-condensed', 'Franklin Gothic Condensed', sans-serif;
+	font-weight: 600;
 }
 
 h1 {
+	font-family: 'United Sans', Impact, sans-serif;
 	text-transform: uppercase;
 	font-weight: 800;
 }
@@ -28,6 +32,10 @@ h2, h3 {
 
 a {
 	color: #8E6F3E !important;
+}
+
+pre {
+	font-family: 'Source Code Pro', Consolas, monospace;
 }
 
 /*== Navbar ==*/
