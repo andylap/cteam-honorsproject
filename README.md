@@ -12,15 +12,15 @@ List of Topics:
 * Professional Coding Standards
 * Agile/Scrum Methodologies
 * Preparing for technical interviews
-* Dynamic programming and big O notation to evaluate complexity
+* Dynamic programming and Big O notation to evaluate complexity
 * OOP cheat sheet
 
 ## Contributions
-* **Ben Loshe:** I will build a page demonstrating the differences between tabular and non-tabular databases, how to use eachone, how this topic relates to object-oriented programming and what the trade-offs between each are. I will also helpbuild the css and html for the website.
-* **Tim Zhou:** I will build a page demonstrating C++ and git set up for Mac/Linux. On another page, I will go over how tointerface essential git commands with GitHub. I will also go over slightly more complex commands that could be useful!
-* **Abigail Vincent:** I will add to the page demonstrating C++ and git setup for Windows. Additionally, I will create a page thatexplains how to develop within the professional workflow of Scrum (and the greater Agile method).
-* **Andrew LaPrade:** In addition to helping build the website, I will build a page on how to set up Java for all platforms.Additionally, I will create a ‘career preparation’ page that would provide some guidance on approaching technicalinterviews for software engineering careers.
-* **Brett Weyer:** For my contribution to the project, I will create a page covering Bash commands that code developers mayprefer over traditional file system management or IDE code compilation methods. In addition to this, I will cover howthese, plus additional commands and syntax, can be formatted into Makefiles that increase the efficiency with which adeveloper can compile, run, test, and compare code files and/or their outputs.
+* **Ben Loshe:** I will build a page demonstrating the differences between tabular and non-tabular databases, how to use each one, how this topic relates to object-oriented programming and what the trade-offs between each are. I will also help build the css and html for the website.
+* **Tim Zhou:** I will build a page demonstrating C++ and git set up for Mac/Linux. On another page, I will go over how to interface essential git commands with GitHub. I will also go over slightly more complex commands that could be useful!
+* **Abigail Vincent:** I will add to the page demonstrating C++ and git setup for Windows. Additionally, I will create a page that explains how to develop within the professional workflow of Scrum (and the greater Agile method).
+* **Andrew LaPrade:** In addition to helping build the website, I will build a page on how to set up Java for all platforms. Additionally, I will create a ‘career preparation’ page that would provide some guidance on approaching technical interviews for software engineering careers.
+* **Brett Weyer:** For my contribution to the project, I will create a page covering Bash commands that code developers may prefer over traditional file system management or IDE code compilation methods. In addition to this, I will cover how these, plus additional commands and syntax, can be formatted into Makefiles that increase the efficiency with which a developer can compile, run, test, and compare code files and/or their outputs.
 * **Kaiwen Shen:** I will build a page looking into dynamic programming and big O notation to analyze code complexity. I will introduce the concept and give examples on how to make improvements to the code efficiency.
-* **Alia Ahmed:** As well as contributing to the website, I will build a page focusing on different compilers, their installation processes, and unique aspects .  Additionally, I will delve into gamification in the Agile method as a separate page orarticle.
+* **Alia Ahmed:** As well as contributing to the website, I will build a page focusing on different compilers, their installation processes, and unique aspects. Additionally, I will delve into gamification in the Agile method as a separate page or article.
 * **Charles Pisciotta:** I will create a page with different professional development resources for software developers. This might include resume resources, interview prep resources, and ways to showcase personal projects.
