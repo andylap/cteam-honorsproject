@@ -1,4 +1,10 @@
-/*== Body Reset ==*/
+/*== Bootstrap Mobile Gutter Fix ==*/
+.row, .container-fluid {
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+  }
+
+/*== Customization ==*/
 body {
 	overflow-x: hidden;
 	font-family: 'acumin-pro', 'Franklin Gothic', sans-serif;
@@ -42,4 +48,14 @@ a {
 
 .nav-link.active, .nav-link:hover {
 	color: #8E6F3E !important;
+}
+
+/*== Footer ==*/
+footer {
+	background-color: #000000 !important;
+	padding: 1rem 2rem 1rem;
+}
+
+.text-light a {
+	color: #CFB991 !important;
 }
