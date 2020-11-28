@@ -56,7 +56,7 @@
 		<a href="#git_why"><h2>Why use Git?</h2></a>
 		<p>
 			Simply, it makes collaboration easier. Git will track whwat you have added to source files, what you have deleted, 
-			allow you to revert to previous version, and so much more. In projects with thousands of contributors, like open source
+			allow you to revert to previous versions, and so much more. In projects with thousands of contributors, like open source
 			projects, git is essential in making sure different people don't cause conflicts or break the current
 			system. With engineers, it's all about efficiency, and git delivers exactly that when it comes to project management.
 		</p>
@@ -95,9 +95,14 @@
 				  </button>
 				</h5>
 			  </div>
-			  <div id="collapseOne" class="collapse show" aria-labelledby="clone_init" data-parent="#accordion">
+			  <div id="collapseOne" class="collapse" aria-labelledby="clone_init" data-parent="#accordion">
 				<div class="card-body">
-				  <pre>git init</pre>
+				  <pre>$ git init</pre>
+				  <p>Navigate to a specified directory and enter the following command to create an empty git repository.</p>
+				  <pre>$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY</pre>
+				  <p>Use the following command to create a copy of an existing repository. To clone a GitHub repository, navigate to the 
+					  project page. You can either clone via HTTPS or SSH. The example above shows HTTPS.
+				  </p>
 				</div>
 			  </div>
 			</div>
@@ -110,9 +115,14 @@
 					  </button>
 				</h5>
 			  </div>
-			  <div id="collapseTwo" class="collapse show" aria-labelledby="add" data-parent="#accordion">
+			  <div id="collapseTwo" class="collapse" aria-labelledby="add" data-parent="#accordion">
 				<div class="card-body">
-					
+					<pre>$ git add [filename]</pre>
+					<p>To move your changes to the staging area, use the above command. Remember, these changes could also be deletions. So you can add a deleted file to the staging area. This must be done before commit</p>
+					<pre>$ git add .</pre>
+					<p>
+						Don't want to add each individual file or directory? No problem, just use the above command to recursively stage all changes.
+					</p>
 				</div>
 			  </div>
 			</div>
@@ -125,9 +135,16 @@
 					  </button>
 				</h5>
 			  </div>
-			  <div id="collapseThree" class="collapse show" aria-labelledby="commit" data-parent="#accordion">
+			  <div id="collapseThree" class="collapse" aria-labelledby="commit" data-parent="#accordion">
 				<div class="card-body">
-				  
+					<pre>$ git commit</pre>
+					<p>Are all your changes staged? If so, use this command to take a "screenshot" of your staged changes to your local repository. You will be prompted by a
+						text editor to enter your commit message. This should describe the changes you are committing, usually pretty short.
+					</p>
+					<pre>$ git commit -m "[message]"</pre>
+					<p>
+						To skip the extra step of entering your commit message in an editor, use the above command to kill two birds with one stone.
+					</p>
 				</div>
 			  </div>
 			</div>
@@ -140,10 +157,22 @@
 						</button>
 				  </h5>
 				</div>
-				<div id="collapseFour" class="collapse show" aria-labelledby="push_pull" data-parent="#accordion">
-				  <div class="card-body">
-					
-				  </div>
+				<div id="collapseFour" class="collapse" aria-labelledby="push_pull" data-parent="#accordion">
+					<div class="card-body">
+						<pre>$ git push [remote] [branch]</pre>
+						<p>
+							You should probably pull before you push. The push command will sync a local branch with the remote repository. 
+							If you aren't using branches, the command will most likely look like <pre>$ git push origin master</pre> since master
+							is the default branch. "origin" specifies the name of the remote repository. 
+						</p>
+						<pre>$ git pull [remote] [branch]</pre>
+						<p>
+							This command is just a combination of git fetch and git merge. This will update your local repository with what is in the remote.
+							Like push, if you aren't using branches this command will most likely look like <pre>git pull origin master</pre>
+							Hopefully there isn't a conflict! If you expect conflicts, it's better to first use <pre>git fetch</pre>
+							This will allow you to see what everybody else is working on without merging.
+						</p>
+					</div>
 				</div>
 			  </div>
 		  </div>
@@ -156,10 +185,17 @@
 					</button>
 			  </h5>
 			</div>
-			<div id="collapseFive" class="collapse show" aria-labelledby="status_log" data-parent="#accordion">
-			  <div class="card-body">
-				
-			  </div>
+			<div id="collapseFive" class="collapse" aria-labelledby="status_log" data-parent="#accordion">
+				<div class="card-body">
+					<pre>$ git status</pre>
+					<p>
+						Shows you what's going on in your working directory and staging area. See what files are to be committed with this function. Also color coded!
+					</p>
+					<pre>$ git log</pre>
+					<p>
+						Curious about what has been committed? Use this command to see the ids and information of all git commits.
+					</p>
+				</div>
 			</div>
 		  </div>
 
@@ -171,10 +207,29 @@
 					</button>
 			  </h5>
 			</div>
-			<div id="collapseSix" class="collapse show" aria-labelledby="branch" data-parent="#accordion">
-			  <div class="card-body">
-				
-			  </div>
+			<div id="collapseSix" class="collapse" aria-labelledby="branch" data-parent="#accordion">
+				<div class="card-body">
+					What are branches and why? Generally you DO NOT want to work directly on the master branch especially in large projects. This will 
+					lead to inevitable merge conflicts. Often the code on the master branch is production code. Directly pushing to the master branch can 
+					potentially break a system. Instead, branches create copies that you can edit before you either merge it back into the master branch or create
+					a pull request (developer request to integrate changes into main repository)
+					<pre>$ git branch [branchname]</pre>
+					<p>
+						Creates a branch.
+					</p>
+					<pre>$ git checkout [branchname]</pre>
+					<p>
+						Switches to a branch.
+					</p>
+					<pre>$ git checkout -b [branchname]</pre>
+					<p>
+						Does both git branch and git checkout commands in one!
+					</p>
+					<pre>$ git branch -a</pre>
+					<p>
+						See a list of branches.
+					</p>
+				</div>
 			</div>
 		  </div>
 
@@ -186,10 +241,24 @@
 					</button>
 			  </h5>
 			</div>
-			<div id="collapseSeven" class="collapse show" aria-labelledby="merge" data-parent="#accordion">
-			  <div class="card-body">
-				
-			  </div>
+			<div id="collapseSeven" class="collapse" aria-labelledby="merge" data-parent="#accordion">
+				<div class="card-body">
+					Time to integrate changes back? First switch to the desired branch and then use the following command to merge the changes
+					<pre>$ git merge [branchname]</pre>
+					<p>
+						Creates a branch.
+					</p>
+					<p>If you are merging into master, your sequence of commands probably look like:</p>
+					<pre>$ git checkout master</pre>
+					<pre>$ git merge branchtomerge</pre>
+					<p>
+						More likely then not, you will encounter merge conflicts at some point when doing this. 
+						There are many ways to resolve conflicts.
+						 <a href ="https://docs.github.com/en/free-pro-team@latest/github/collaborating-with-issues-and-pull-requests/resolving-a-merge-conflict-using-the-command-line">Command Line. </a>
+						 <a href ="https://medium.com/better-programming/how-to-resolve-git-conflicts-faster-and-more-easily-in-your-favorite-ide-9d2984283a79">IDE</a>
+					</p>
+					
+				</div>
 			</div>
 		  </div>
 	  </div>
