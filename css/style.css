@@ -25,9 +25,13 @@ h1 {
 	font-weight: 800;
 }
 
-h2, h3 {
+h2 {
 	color: #8E6F3E !important;
 	font-weight: 600;
+}
+
+h3 {
+	color: #555960 !important;
 }
 
 a {
@@ -36,6 +40,16 @@ a {
 
 pre {
 	font-family: 'Source Code Pro', Consolas, monospace;
+}
+
+.btn-primary {
+	background-color: #DDB945 !important;
+	color: #000000 !important;
+	border-color: #8E6F3E !important;
+}
+
+.btn-primary:hover {
+	background-color: #DAAA00 !important;
 }
 
 .btn-link {

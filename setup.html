@@ -45,33 +45,132 @@
 	</div>
 	
 	<div class="container" id="overview">
-		<a href="#overview"><h2>Overview</h2></a>
-		<p>This page will demonstrate how to install git into various OS.</p>
+		<a href="#overview"><h2>Overview</h2></a>		<p>This page will demonstrate how to setup:</p>
+		<ul>
+			<li>Git on macOS, Linux, and Windows</li>
+			<li>C++ on macOS, Linux, and Windows</li>
+			<li>Java on macOS, Linux, and Windows</li>
+		</ul>
 	</div>
 
-	<div class = "container" id="mac">
-		<h2>macOS</h2>
-		<p>
-			Git is probably already installed into your system if you are running macOS.
-			You can check using the following command in your terminal:
-			<pre>$ git --version</pre>
-			<br>
-			If it is not installed, just install Homebrew and enter the following command:
-			<pre>$ brew install git</pre>
-		</p>
+	<div class="container" id="git">
+		<a href="#git"><h2>Installing Git</h2></a>
+		<div id="#git-mac">
+			<a href="#git-mac"><h3>macOS</h3></a>
+			<p>
+				Git is probably already installed into your system if you are running macOS.
+				You can check using the following command in your terminal:
+				<pre>$ git --version</pre>
+				<br>
+				If it is not installed, just install Homebrew and enter the following command:
+				<pre>$ brew install git</pre>
+			</p>
+		</div>
+	
+		<div id="git-linux">
+			<a href="#git-linux"><h3 href="#git-linux">Linux</h3></a>
+			<p>
+				Like macOS, Git is probably already installed into your system if you are running Linux. It is definitely installed if you are Purdue's ecngrid.
+				You can check using the following command in your terminal:
+				<pre>$ git --version</pre>
+				<br>
+				If it is not installed, just enter the following commands:
+				<pre>$ sudo apt-get update </pre>
+				<pre>$ sudo apt-get install git</pre>
+			</p>
+		</div>
 	</div>
-	<div class = "container" id="linux">
-		<h2>Linux</h2>
+
+	<div class="container" id="java">
+		<a href="#java"><h2>Installing Java</h2></a>
 		<p>
-			Like macOS, Git is probably already installed into your system if you are running Linux. It is definitely installed if you are Purdue's ecngrid.
-			You can check using the following command in your terminal:
-			<pre>$ git --version</pre>
-			<br>
-			If it is not installed, just enter the following commands:
-			<pre>$ sudo apt-get update </pre>
-			<pre>$ sudo apt-get install git</pre>
+			Installing Java is the same on macOS, the most common flavors of Linux (Ubuntu, Debian, etc.), and Windows.
+			<ol>
+				<li>Download the Java Development Kit (JDK) <a href="https://www.oracle.com/java/technologies/javase-downloads.html">through Oracle's website</a>. Once you're there, click on <b>JDK Download</b> and choose the download for your OS:</li>
+				<ul>
+					<li>For macOS, choose the <b>macOS Installer</b>.</li>
+					<li>For a Linux flavor like Debian and Ubuntu, choose the <b>Linux x64 Debian Package</b> if you're using an Intel- or AMD-based processor (which is the most common case).</li>
+					<li>For Windows, choose the <b>Windows x64 Installer</b>.</li>
+				</ul>
+				<li>Open the installer or package and follow the instructions in the setup.</li>
+				<li>When setup is complete, you can check that it has installed successfully by using the following command in your terminal (Command Prompt if on Windows):
+					<br>
+					<pre>java -version</pre>
+				</li>
+			</ol>
 		</p>
+		<div class="mb-5" id="java-ide">
+			<a href="#java-ide"><h3>Choosing an IDE</h3></a>
+			<p>There are several options for you to choose when it comes to an Integrated Development Environment (IDE). IDEs are incredibly useful when developing Java programs since it includes both a space for you to code your program as well as provide powerful tools for debugging.</p>
+
+			<div id="accordion">
+				<div class="card">
+				  <div class="card-header" id="java-eclipse">
+					<h5 class="mb-0">
+					  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+						<h4>Eclipse</h4>
+					  </button>
+					</h5>
+				  </div>
+				  <div id="collapseOne" class="collapse" aria-labelledby="clone_init" data-parent="#accordion">
+					<div class="card-body">
+					  <p>Eclipse is the most popular IDE for Java developers, which includes a fully-integrated environment that is adaptible to different needs and uses. It includes a solid collection of libraries, as well as a large library of plugins available to suit your needs. Eclipse is available to download through the Eclipse Foundation's website at <a href="https://eclipse.org">eclipse.org</a>.</p>
+					  <a class="btn btn-primary" href="https://www.eclipse.org/eclipseide/" role="button">Download Eclipse</a>
+					</div>
+				  </div>
+				</div>
+
+				<div class="card">
+					<div class="card-header" id="java-intellij">
+					  <h5 class="mb-0">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+						  <h4>IntelliJ IDEA</h4>
+						</button>
+					  </h5>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="clone_init" data-parent="#accordion">
+					  <div class="card-body">
+						<p>IntelliJ IDEA offers features that are geared towards more advanced developers, while maintaining a simple user interface for beginners. It offers smart completion and chain completion when coding along with powerful debugging tools and Git support. IntelliJ IDEA has a free Community Edition, as well as an Ultimate Edition available to download through JetBrains's website at <a href="https://jetbrains.com">jetbrains.com</a>. However, as a student, you are able to download the Ultimate Edition for free if you <a href="https://www.jetbrains.com/shop/eform/students">apply for an education license</a>.</p>
+						<a class="btn btn-primary" href="https://www.jetbrains.com/idea/download/" role="button">Download IntelliJ IDEA</a>
+					  </div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-header" id="java-netbeans">
+					  <h5 class="mb-0">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+						  <h4>Apache NetBeans</h4>
+						</button>
+					  </h5>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="clone_init" data-parent="#accordion">
+					  <div class="card-body">
+						<p>NetBeans is the oldest of the top IDEs for Java (released 1997), which was the official IDE for Java 8 when released in 2014. It features visual debugging for GUI applications as well as extensions for other languages like C/C++. NetBeans is available to download through the Apache website at <a href="https://netbeans.apache.org/">netbeans.apache.org</a>.</p>
+						<a class="btn btn-primary" href="https://netbeans.apache.org/" role="button">Download Apache NetBeans</a>
+					  </div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-header" id="java-vscode">
+					  <h5 class="mb-0">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+						  <h4>Visual Studio Code</h4>
+						</button>
+					  </h5>
+					</div>
+					<div id="collapseFour" class="collapse" aria-labelledby="clone_init" data-parent="#accordion">
+					  <div class="card-body">
+						<p>Visual Studio Code is the newest source-code editor with features that make it act like an IDE. By installing the Java Extension Pack, you are able to use Microsoft's IntelliSense code completion feature along with direct Git support. Visual Studio Code is available to download for free on <a href="https://code.visualstudio.com/">Microsoft's website</a>.</p>
+						<a class="btn btn-primary" href="https://code.visualstudio.com/" role="button">Download Visual Studio Code</a>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+
 	<!-- Footer -->
 	<footer>
 		<div class="container">
