@@ -38,7 +38,7 @@ a {
 	color: #8E6F3E !important;
 }
 
-pre {
+pre, code {
 	font-family: 'Source Code Pro', Consolas, monospace;
 }
 
