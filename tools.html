@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Software Tools | ECE 39595 Knowledgebase</title>
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<!-- Bootstrap 4.5 CSS -->
@@ -14,6 +15,7 @@
 	<link href="https://www.purdue.edu/purdue/fonts/united-sans/united-sans.css" rel="stylesheet" />
 	<link href="https://use.typekit.net/ghc8hdz.css" rel="stylesheet" />
 </head>
+
 <body>
 	<!-- Navigation -->
 	<nav class="navbar fixed-top bg-light navbar-light">
@@ -39,319 +41,501 @@
 		</div>
 	</nav>
 
-<!-- Page Content -->
-<div class="container mt-5" id="title">
-	<h1 class="pt-4">Software Tools</h1>
-</div>
-
-<div class="container" id="overview">
-	<a href="#overview"><h2>Overview</h2></a>
-	<p>
-		This section will give some background information regarding compilers/interpreters for different languages and platforms.  
-		It will also provide a brief overview of how to choose and install certain more popular compilers.
-	</p>
-</div>
-
-<div class="container" id="inter_comp">
-	<a href="#inter_comp"><h2>Compiled vs. Interpreted Languages</h2></a>
-	<p>
-		First, a little background information.
-	</p>
-	<p>
-		Programming langauges are typically classified as either compiled or interpreted based on the 
-		process needed to run a program.  Although the difference between compiled and interpreted languages 
-		can get blurry with all the different compilers/interpreters out there, it's a good starting point to 
-		understand how code actually runs. 
-	</p>
-	<p>
-		Programs written in <b>compiled</b> languages are executed directly on the computer’s processer where a 
-		compiler turns the code into machine language that the processor can understand.  Then, at runtime, 
-		the machine language is used to execute your program.  Compiled languages require a two step process to run
-		a program.
-	</p>
-	<p>
-		<b>Interpreted</b> languages, on the other hand, are programming languages that are not machine 
-		code before runtime (no separate compilation step).  Therefore, the code is translated to 
-		machine language at runtime when the code is being executed, potentially slowing down the 
-		process.  The easiest way to differentiate it from a compiled langauge is that running a program 
-		written in an interpreted language is normally a one step process.
-	</p>
-</div>
-
-<div class="container" id="compiler_neccesity">
-	<a href="#compiler_neccesity"><h2>Setting up a Compiler</h2></a>
-	<p>
-		Another important part of setup- after choosing which language you’ll be programming in- 
-		includes figuring out how exactly you’re going to run that code.  With so many options out 
-		there, installing a compiler can be a little daunting for a new programmer.  This section 
-		will go over some options for C++, Java, and Python compilers and provide some resources to
-		get started.
-	</p>
-</div>
-
-<div class = "container mb-5" id = "compiler_languages">
-	<a href="compiler_languages"><h2>Languages</h2></a>
-	<p>Below are the languages that this page will be focusing on.  Each section will give a brief synopsis 
-		of the compilation/interpretation process for the langauge and provide some information on getting started 
-		with a compiler.
-	</p>
-	<div id="accordion">
-		<div class = "card">
-			<div class = "card-header" id="cpp_init">
-				<h5 class="mb-0">
-					<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-					  <h4 style="color:black">C++ Compilers</h4>
-					</button>
-				</h5> 
-			</div>
-			<div id="collapseOne" class="collapse" aria-labelledby="cpp_init" data-parent="#accordion">
-				<div class="card-body">
-					<h5>Is C++ compiled or interpreted?</h5>
-					<p>
-						C++ is a traditional compiled langauge, in that it's a two step process where .o files containing machine code are created
-						from source code.  Then, those .o files are compiled into an executable that can be run by the user.  C++ is also a language
-						where the compilation process is platform dependent.  The .o files generated on a Windows system cannot be used 
-						by a Linux or Mac system, and vice versa.
-					</p>
-					<p>Several specific C++ compilers are explored below</p>
-					<div id="child1">
-						<div class="card">
-							<div class = "card-header" id="child_one_init">
-								<h5 class="mb-0">
-									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildOne" aria-expanded="true" aria-controls="collapseChildOne">
-										<h5 style="color:black">Simple G++</h5>
-									</button>
-								</h5>
-							</div>
-						</div>
-						<div id="collapseChildOne" class="collapse" aria-labelledby="child_one_init" data-parent="#child1">
-							<div class = "card-body">
-								<p>The G++ compiler can be easily used in a MacOS or Linux environment, but it's a little trickier for Windows. 
-									Therefore, the easiest way to develop quickly in C++ on a Windows machine is to use a Windows Subsystem for Linux</p>
-								<a href="wsl.html" class="nav-link">Using a Windows Subsystem for Linux</a>
-								<p>After you have your MacOS or Linux environment up and running, this is all that's needed to start developing</p>
-								<h5>Linux:</h5>
-								<pre>$ sudo apt install build-essential</pre> 
-								<h5>MacOS:</h5>
-								<p>If XCode is installed, a g++ C++ compiler is installed with it.  If not - or if you want the most updated version - this command can be used</p>
-								<pre>brew install gcc</pre> 
-								<p>And there you have it! Compile your program using:</p>
-								<pre>g++ [src].cpp</pre>
-								<p>Then run it using:</p>
-								<pre>./[executable]</pre>
-								<p>And you're developing in C++!</p>
-							</div> 
-						</div>
-					</div>
-					<div id="child2">
-						<div class="card">
-							<div class = "card-header" id="child_two_init">
-								<h5 class="mb-0">
-									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildTwo" aria-expanded="true" aria-controls="collapseChildTwo">
-										<h5 style="color:black">Clang/Clang++</h5>
-									</button>
-								</h5>
-							</div>
-						</div>
-						<div id="collapseChildTwo" class="collapse" aria-labelledby="child_two_init" data-parent="#child2">
-							<div class = "card-body">
-								<h5>What is Clang?</h5> 
-								<p>
-									Clang is a C, C++, Objective-C, or Objective-C++ compiler that is compiled in C++ based on LLVM and released under the Apache 2.0 license. 
-									Clang is mainly used to provide performance superior to that of GCC. Refer to 
-									<a href="https://alibabatech.medium.com/gcc-vs-clang-llvm-an-in-depth-comparison-of-c-c-compilers-899ede2be378" >this article</a>
-									for an in depth comparison of Clang/Clang++ and GNU/g++.
-								</p>
-								<p>The
-									<a href="https://releases.llvm.org/11.0.0/tools/clang/docs/UsersManual.html">Clang User Manual</a>
-									is a good starting place for figuring out if you'd like to use Clang versus a different compiler.
-								</p>
-								<p>At this point, everything becomes very platform and development environment specific, so several relevant tutorials for using Clang are linked below</p>	
-								<a href="https://code.visualstudio.com/docs/cpp/config-clang-mac">Clang for MacOS and Visual Studio Code</a>
-								<h6></h6>
-								<a href="https://docs.microsoft.com/en-us/cpp/build/clang-support-msbuild?view=msvc-160">Clang for Windows and VSCode</a>
-								<p>But for Linux? Simple, as always: <pre>$sudo apt install clang</pre> is all you need.</p>
-							</div> 
-						</div>
-					</div>
-					<div id="child3">
-						<div class="card">
-							<div class = "card-header" id="child_three_init">
-								<h5 class="mb-0">
-									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildThree" aria-expanded="true" aria-controls="collapseChildThree">
-										<h5 style="color:black">MINGW (For Windows)</h5>
-									</button>
-								</h5> 
-							</div>
-							<div id="collapseChildThree" class="collapse" aria-labelledby="child_three_init" data-parent="#child3">
-								<div class = "card-body">
-									<p>Now, we'll discuss a Windows specific C++ installation: MINGW</p> 
-									<h5>What is MINGW?</h5>
-									<p>MINGW was created to support GCC on Windows systems. This <a href="https://code.visualstudio.com/docs/cpp/config-mingw">tutorial</a>
-										demonstrates how to use MINGW as a compiler with Visual Studio Code, and is very useful for getting set up on a Windows system.
-									</p>
-									<p>If you'd like to use MINGW with Visual Studio this 
-										<a href="https://devblogs.microsoft.com/cppblog/using-mingw-and-cygwin-with-visual-cpp-and-open-folder/#use-mingw-with-visual-studio">tutorial</a>
-										can point you in the right direction.
-									</p>
-								</div> 
-							</div>
-						</div>
-					</div>
-					<div id="child4">
-						<div class="card">
-							<div class = "card-header" id="child_four_init">
-								<h5 class="mb-0">
-									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildFour" aria-expanded="true" aria-controls="collapseChildFour">
-										<h5 style="color:black">XCode C++ (For MacOS)</h5>
-									</button>
-								</h5> 
-							</div>
-							<div id="collapseChildFour" class="collapse" aria-labelledby="child_four_init" data-parent="#child4">
-								<div class = "card-body">
-									<p>As touched on in the Simple G++ section above, installing XCode will be enough to have a base C++ development environment on a Mac.</p> 
-								</div> 
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class = "card">
-			<div class = "card-header" id="java_init">
-				<h5 class="mb-0">
-					<button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-					  <h4 style="color:black">Java Compilers/IDES</h4>
-					</button>
-				</h5> 
-			</div>
-			<div id="collapseTwo" class="collapse" aria-labelledby="java_init" data-parent="#accordion">
-				<div class="card-body" id = "child2">
-					<p>
-						Java is a little different than C++, as it is a language that is neither compiled nor interpreted.  
-						(Alternatively, some say it's both compiled and interpreted).
-						In C or C++, the executable files generated after compilation can only be run on that specific 
-						operating system (a C++ program compiled on a Mac can only run on a Mac).                      
-					</p>
-					<p>
-						Java, however, takes a different approach.  Java designers reorganized the compile-link-execute 
-						sequence used in C/C++, and developed low level means of performing that sequence with platform 
-						independence.                     
-					</p>
-					<p>
-						While a C/C++ compiler creates an object file, the Java compiler 
-						creates a bytecode file, which is an object file for the virtual machine 
-						(often referred to as the Java Virtual Machine or JVM).                    
-					</p>
-					<p>
-						The reason why Java isn't classified as strictly compiled or interpreted is partially because of how dependent
-						it is on the execution environment.  In most cases, JVMs use a technique called Just-in-Time (JIT) compilation 
-						to compile the bytecode to machine code understood by the processor at runtime - a mix between strict compilation 
-						or interpretation.  Additionally it is technically possible to run Java as strictly interpreted or compiled.  Now,
-						we can see how blurred the lines can get between compiled and interpreted langauges with modern execution environments.
-					</p>
-					<h4>
-						To summarize, the high level steps for compiling and running a program in Java work like this:
-					</h4>
-					<ol>
-						<li>Write source code</li>
-						<li>Compile source code to .class files (platform independent)</li>
-						<li>Execute .class files with JVM (platform specific)</li>
-					</ol>
-					<p></p>
-					<p>To develop in Java, it's highly reccomended to use an IDE (Integrated Development Environment). Some of the more popular IDEs are explored on 
-						<a href="setup.html#java-ide">our Setup page.</a>
-						All the options can be a little overwhelming but once you choose one and commit to using it, it'll become 
-						second nature in no time.
-					</p>
-					
-					<h5></h5>
-					<h4>Can I run a Java program from the terminal?</h4>
-					<p>Yes, you definitely can, but it's not customary given the industry standard of using IDEs for Java development.  However, if you'd like to, some resources are linked below</p>
-					<ul>
-						<li><a href="https://introcs.cs.princeton.edu/java/15inout/linux-cmd.html" class="nav-link">Linux</a></li>
-						<li><a href="https://www3.cs.stonybrook.edu/~amione/CSE114_Course/materials/resources/installJavaOnMac.html" class="nav-link">MacOS</a></li>
-						<li><a href="https://www.javatpoint.com/how-to-run-a-java-program-in-windows-10" class="nav-link">Windows</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class = "card">
-			<div class = "card-header" id="python_init">
-				<h5 class="mb-0">
-					<button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-					  <h4 style="color:black">Python Compilation/Interpretation</h4>
-					</button>
-				</h5> 
-			</div>
-			<div id="collapseThree" class="collapse" aria-labelledby="python_init" data-parent="#accordion">
-				<div class="card-body">
-				  <h5>Is Python interpreted or compiled?</h5>
-				  <p>
-					  Answer: It depends. Python is officially classified as an interpreted language, as it  
-					  generates bytecode (machine langauge) from your source code and and executes the bytecode
-					  in one step.
-				  </p>
-				  <p>
-					  The process of compiling and linking in python is similar to Java.  Source code is saved 
-					  as a .py file, and then that is compiled to bytecode like Java (platform independent).  
-					  Bytecode is stored in .pyc files that can be run by the PVM (Python Virtual Machine).
-				  </p>
-				  <p>
-					  If you're curious about where the line is between interpreted and compiled langauges, the 
-					  Python documenation explains it like this:
-				  </p>
-				  <p>
-					  "Python is an interpreted language, as opposed to a compiled one, though the distinction 
-					  can be blurry because of the presence of the bytecode compiler. This means that source files 
-					  can be run directly without explicitly creating an executable which is then run."
-				  </p>
-				  <p>
-					  Finally, there are several interesting Python compilers designed to work with other languages, 
-					  and a few will be discussed below. TODO EN LA MANANA
-				  </p>
-				</div>
-			</div>
-		</div>
+	<!-- Page Content -->
+	<div class="container mt-5" id="title">
+		<h1 class="pt-4">Software Tools</h1>
 	</div>
-	<br>
-	<h4>This is all a little overwhelming.  What about all of these online compilers?  Can I just use those?</h4>
-	<p>
-		Online compilers are fantastic for simple debugging and testing, but it's best to start using and familiarlizing 
-		yourself with creating a local development environment. Virtually all reasonably sized projects - for school, 
-		hobby, and work - require familiarity with a local development environment. With all 
-		the options out there, choosing what to use (especially on Windows) can be quite overwhelming, but hopefully this page 
-		gives an idea of some of the options out there.  
-	</p>
-	<p>
-		And - speaking from a Windows perspective - setting up a development environment
-		within a Linux Subsystem can be much easier that delving into the world of Windows development.
-		This is especially true if collaborating with someone working on a MacOS or Linux system.
-	</p>
-</div>
 
-<!-- Footer -->
-<footer>
-	<div class="container">
-		<div class="row text-light text-center py-4 justify-content-center">
-			<div class="col-sm-10 col-md-8 col-lg-6">
-				<a href="index.html" style="font-weight: 700; font-size: 1.5rem; text-transform: uppercase;">ECE 39595 Knowledgebase</a>
-				<p>Honors Project for <a href="https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=579&show=true&type=undergrad">ECE 39595</a> (Object-Oriented Programming using C++ and Java) at <a href="https://purdue.edu">Purdue University</a> for Fall 2020.</p>
+	<div class="container" id="overview">
+		<a href="#overview">
+			<h2>Overview</h2>
+		</a>
+		<p>
+			This section will give some background information regarding compilers/interpreters for different languages
+			and platforms.
+			It will also provide a brief overview of how to choose and install certain more popular compilers.
+		</p>
+	</div>
+
+	<div class="container" id="inter_comp">
+		<a href="#inter_comp">
+			<h2>Compiled vs. Interpreted Languages</h2>
+		</a>
+		<p>
+			First, a little background information.
+		</p>
+		<p>
+			Programming langauges are typically classified as either compiled or interpreted based on the
+			process needed to run a program. Although the difference between compiled and interpreted languages
+			can get blurry with all the different compilers/interpreters out there, it's a good starting point to
+			understand how code actually runs.
+		</p>
+		<p>
+			Programs written in <b>compiled</b> languages are executed directly on the computer’s processer where a
+			compiler turns the code into machine language that the processor can understand. Then, at runtime,
+			the machine language is used to execute your program. Compiled languages require a two step process to run
+			a program.
+		</p>
+		<p>
+			<b>Interpreted</b> languages, on the other hand, are programming languages that are not machine
+			code before runtime (no separate compilation step). Therefore, the code is translated to
+			machine language at runtime when the code is being executed, potentially slowing down the
+			process. The easiest way to differentiate it from a compiled langauge is that running a program
+			written in an interpreted language is normally a one step process.
+		</p>
+	</div>
+
+	<div class="container" id="compiler_neccesity">
+		<a href="#compiler_neccesity">
+			<h2>Setting up a Compiler</h2>
+		</a>
+		<p>
+			Another important part of setup- after choosing which language you’ll be programming in-
+			includes figuring out how exactly you’re going to run that code. With so many options out
+			there, installing a compiler can be a little daunting for a new programmer. This section
+			will go over some options for C++, Java, and Python compilers and provide some resources to
+			get started.
+		</p>
+	</div>
+
+	<div class="container mb-5" id="compiler_languages">
+		<a href="compiler_languages">
+			<h2>Languages</h2>
+		</a>
+		<p>Below are the languages that this page will be focusing on. Each section will give a brief synopsis
+			of the compilation/interpretation process for the langauge and provide some information on getting started
+			with a compiler. 
+		</p>
+		<div id="accordion">
+			<div class="card">
+				<div class="card-header" id="cpp_init">
+					<h5 class="mb-0">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+							aria-expanded="true" aria-controls="collapseOne">
+							<h4 style="color:black">C++ Compilers</h4>
+						</button>
+					</h5>
+				</div>
+				<div id="collapseOne" class="collapse" aria-labelledby="cpp_init" data-parent="#accordion">
+					<div class="card-body">
+						<h5>Is C++ compiled or interpreted?</h5>
+						<p>
+							C++ is a traditional compiled langauge, in that it's a two step process where .o files
+							containing machine code are created
+							from source code. Then, those .o files are compiled into an executable that can be run by
+							the user. C++ is also a language
+							where the compilation process is platform dependent. The .o files generated on a Windows
+							system cannot be used
+							by a Linux or Mac system, and vice versa.
+						</p>
+						<p>Several specific C++ compilers are explored below</p>
+						<div id="child1">
+							<div class="card">
+								<div class="card-header" id="child_one_init">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse"
+											data-target="#collapseChildOne" aria-expanded="true"
+											aria-controls="collapseChildOne">
+											<h5 style="color:black">Simple G++</h5>
+										</button>
+									</h5>
+								</div>
+							</div>
+							<div id="collapseChildOne" class="collapse" aria-labelledby="child_one_init"
+								data-parent="#child1">
+								<div class="card-body">
+									<p>The G++ compiler can be easily used in a MacOS or Linux environment, but it's a
+										little trickier for Windows.
+										Therefore, the easiest way to develop quickly in C++ on a Windows machine is to
+										use a Windows Subsystem for Linux</p>
+									<a href="wsl.html" class="nav-link">Using a Windows Subsystem for Linux</a>
+									<p>After you have your MacOS or Linux environment up and running, this is all that's
+										needed to start developing</p>
+									<h5>Linux:</h5>
+									<pre>$ sudo apt install build-essential</pre>
+									<h5>MacOS:</h5>
+									<p>If XCode is installed, a g++ C++ compiler is installed with it. If not - or if
+										you want the most updated version - this command can be used</p>
+									<pre>brew install gcc</pre>
+									<p>And there you have it! Compile your program using:</p>
+									<pre>g++ [src].cpp</pre>
+									<p>Then run it using:</p>
+									<pre>./[executable]</pre>
+									<p>And you're developing in C++!</p>
+								</div>
+							</div>
+						</div>
+						<div id="child2">
+							<div class="card">
+								<div class="card-header" id="child_two_init">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse"
+											data-target="#collapseChildTwo" aria-expanded="true"
+											aria-controls="collapseChildTwo">
+											<h5 style="color:black">Clang/Clang++</h5>
+										</button>
+									</h5>
+								</div>
+							</div>
+							<div id="collapseChildTwo" class="collapse" aria-labelledby="child_two_init"
+								data-parent="#child2">
+								<div class="card-body">
+									<h5>What is Clang?</h5>
+									<p>
+										Clang is a C, C++, Objective-C, or Objective-C++ compiler that is compiled in
+										C++ based on LLVM and released under the Apache 2.0 license.
+										Clang is mainly used to provide performance superior to that of GCC. Refer to
+										<a
+											href="https://alibabatech.medium.com/gcc-vs-clang-llvm-an-in-depth-comparison-of-c-c-compilers-899ede2be378">this
+											article</a>
+										for an in depth comparison of Clang/Clang++ and GNU/g++.
+									</p>
+									<p>The
+										<a href="https://releases.llvm.org/11.0.0/tools/clang/docs/UsersManual.html">Clang
+											User Manual</a>
+										is a good starting place for figuring out if you'd like to use Clang versus a
+										different compiler.
+									</p>
+									<p>At this point, everything becomes very platform and development environment
+										specific, so several relevant tutorials for using Clang are linked below</p>
+									<a href="https://code.visualstudio.com/docs/cpp/config-clang-mac">Clang for MacOS
+										and Visual Studio Code</a>
+									<h6></h6>
+									<a
+										href="https://docs.microsoft.com/en-us/cpp/build/clang-support-msbuild?view=msvc-160">Clang
+										for Windows and VSCode</a>
+									<p>But for Linux? Simple, as always:
+									<pre>$sudo apt install clang</pre> is all you need.</p>
+								</div>
+							</div>
+						</div>
+						<div id="child3">
+							<div class="card">
+								<div class="card-header" id="child_three_init">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse"
+											data-target="#collapseChildThree" aria-expanded="true"
+											aria-controls="collapseChildThree">
+											<h5 style="color:black">MINGW (For Windows)</h5>
+										</button>
+									</h5>
+								</div>
+								<div id="collapseChildThree" class="collapse" aria-labelledby="child_three_init"
+									data-parent="#child3">
+									<div class="card-body">
+										<p>Now, we'll discuss a Windows specific C++ installation: MINGW</p>
+										<h5>What is MINGW?</h5>
+										<p>MINGW was created to support GCC on Windows systems. This <a
+												href="https://code.visualstudio.com/docs/cpp/config-mingw">tutorial</a>
+											demonstrates how to use MINGW as a compiler with Visual Studio Code, and is
+											very useful for getting set up on a Windows system.
+										</p>
+										<p>If you'd like to use MINGW with Visual Studio this
+											<a
+												href="https://devblogs.microsoft.com/cppblog/using-mingw-and-cygwin-with-visual-cpp-and-open-folder/#use-mingw-with-visual-studio">tutorial</a>
+											can point you in the right direction.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="child4">
+							<div class="card">
+								<div class="card-header" id="child_four_init">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse"
+											data-target="#collapseChildFour" aria-expanded="true"
+											aria-controls="collapseChildFour">
+											<h5 style="color:black">XCode C++ (For MacOS)</h5>
+										</button>
+									</h5>
+								</div>
+								<div id="collapseChildFour" class="collapse" aria-labelledby="child_four_init"
+									data-parent="#child4">
+									<div class="card-body">
+										<p>As touched on in the Simple G++ section above, installing XCode will be
+											enough to have a base C++ development environment on a Mac.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="java_init">
+					<h5 class="mb-0">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+							aria-expanded="true" aria-controls="collapseTwo">
+							<h4 style="color:black">Java Compilers/IDES</h4>
+						</button>
+					</h5>
+				</div>
+				<div id="collapseTwo" class="collapse" aria-labelledby="java_init" data-parent="#accordion">
+					<div class="card-body" id="child2">
+						<p>
+							Java is a little different than C++, as it is a language that is neither compiled nor
+							interpreted.
+							(Alternatively, some say it's both compiled and interpreted).
+							In C or C++, the executable files generated after compilation can only be run on that
+							specific
+							operating system (a C++ program compiled on a Mac can only run on a Mac).
+						</p>
+						<p>
+							Java, however, takes a different approach. Java designers reorganized the
+							compile-link-execute
+							sequence used in C/C++, and developed low level means of performing that sequence with
+							platform
+							independence.
+						</p>
+						<p>
+							While a C/C++ compiler creates an object file, the Java compiler
+							creates a bytecode file, which is an object file for the virtual machine
+							(often referred to as the Java Virtual Machine or JVM).
+						</p>
+						<p>
+							The reason why Java isn't classified as strictly compiled or interpreted is partially
+							because of how dependent
+							it is on the execution environment. In most cases, JVMs use a technique called Just-in-Time
+							(JIT) compilation
+							to compile the bytecode to machine code understood by the processor at runtime - a mix
+							between strict compilation
+							or interpretation. Additionally it is technically possible to run Java as strictly
+							interpreted or compiled. Now,
+							we can see how blurred the lines can get between compiled and interpreted langauges with
+							modern execution environments.
+						</p>
+						<h4>
+							To summarize, the high level steps for compiling and running a program in Java work like
+							this:
+						</h4>
+						<ol>
+							<li>Write source code</li>
+							<li>Compile source code to .class files (platform independent)</li>
+							<li>Execute .class files with JVM (platform specific)</li>
+						</ol>
+						<p></p>
+						<p>To develop in Java, it's highly reccomended to use an IDE (Integrated Development
+							Environment). Some of the more popular IDEs are explored on
+							<a href="setup.html#java-ide">our Setup page.</a>
+							All the options can be a little overwhelming but once you choose one and commit to using it,
+							it'll become
+							second nature in no time.
+						</p>
+
+						<h5></h5>
+						<h4>Can I run a Java program from the terminal?</h4>
+						<p>Yes, you definitely can, but it's not customary given the industry standard of using IDEs for
+							Java development. However, if you'd like to, some resources are linked below</p>
+						<ul>
+							<li><a href="https://introcs.cs.princeton.edu/java/15inout/linux-cmd.html"
+									class="nav-link">Linux</a></li>
+							<li><a href="https://www3.cs.stonybrook.edu/~amione/CSE114_Course/materials/resources/installJavaOnMac.html"
+									class="nav-link">MacOS</a></li>
+							<li><a href="https://www.javatpoint.com/how-to-run-a-java-program-in-windows-10"
+									class="nav-link">Windows</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="card">
+				<div class="card-header" id="python_init">
+					<h5 class="mb-0">
+						<button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree"
+							aria-expanded="true" aria-controls="collapseThree">
+							<h4 style="color:black">Python Compilation/Interpretation</h4>
+						</button>
+					</h5>
+				</div>
+				<div id="collapseThree" class="collapse" aria-labelledby="python_init" data-parent="#accordion">
+					<div class="card-body">
+						<h5>Is Python interpreted or compiled?</h5>
+						<p>
+							Answer: It depends. Python is officially classified as an interpreted language, as it
+							generates bytecode (machine langauge) from your source code and and executes the bytecode
+							in one step.
+						</p>
+						<p>
+							The process of compiling and linking in python is similar to Java. Source code is saved
+							as a .py file, and then that is compiled to bytecode like Java (platform independent).
+							Bytecode is stored in .pyc files that can be run by the PVM (Python Virtual Machine).
+						</p>
+						<p>
+							If you're curious about where the line is between interpreted and compiled langauges, the
+							Python documenation explains it like this:
+						</p>
+						<p>
+							"Python is an interpreted language, as opposed to a compiled one, though the distinction
+							can be blurry because of the presence of the bytecode compiler. This means that source files
+							can be run directly without explicitly creating an executable which is then run."
+						</p>
+						<p>
+							Finally, there are several interesting Python compilers and interpreters designed to work
+							with other languages,
+							and a few will be discussed below.
+						</p>
+						<div id="child1">
+							<div class="card">
+								<div class="card-header" id="child_one_init">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse"
+											data-target="#collapseChildOne" aria-expanded="true"
+											aria-controls="collapseChildOne">
+											<h5 style="color:black">CPython: The Original Python Implementation</h5>
+										</button>
+									</h5>
+								</div>
+							</div>
+							<div id="collapseChildOne" class="collapse" aria-labelledby="child_one_init"
+								data-parent="#child1">
+								<div class="card-body">
+									<p>
+										CPython is the default interpretation that is installed when you download Python
+										from
+										<a href="python.org">python.org</a>
+										. Written in C, CPython follows the traditional formal of compiling source into
+										bytecode
+										and interpreting that bytecode.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div id="child2">
+							<div class="card">
+								<div class="card-header" id="child_two_init">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse"
+											data-target="#collapseChildTwo" aria-expanded="true"
+											aria-controls="collapseChildTwo">
+											<h5 style="color:black">PyPy</h5>
+										</button>
+									</h5>
+								</div>
+							</div>
+							<div id="collapseChildTwo" class="collapse" aria-labelledby="child_two_init"
+								data-parent="#child2">
+								<div class="card-body">
+									<p>
+										PyPy is heralded as a faster Python interpreter - in fact, it is
+										<a href="https://speed.pypy.org/">on average 4.3x faster than CPython.</a>
+										PyPy maintains its speed by using JIT (Just-in-Time) compilation and other
+										behind the scenes optimization. In most cases, you're able to swap out CPython
+										for PyPy without significant changes being required.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div id="child3">
+							<div class="card">
+								<div class="card-header" id="child_three_init">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse"
+											data-target="#collapseChildThree" aria-expanded="true"
+											aria-controls="collapseChildThree">
+											<h5 style="color:black">Brython (Browser Python)</h5>
+										</button>
+									</h5>
+								</div>
+							</div>
+							<div id="collapseChildThree" class="collapse" aria-labelledby="child_three_init"
+								data-parent="#child3">
+								<div class="card-body">
+									<p>
+										Brython is a Python compiler that converts Python code into JavaScript code.
+										Brython is built for the HTML5 environment and has a built in interface to the
+										DOM (Document Object Model) objects and events. It comes prepackaged with
+										relevant
+										libraries, suppports almost all features of CPython, and provides support for
+										all
+										modern browsers.
+									</p>
+								</div>
+							</div>
+						</div>
+						<div id="child4">
+							<div class="card">
+								<div class="card-header" id="child_four_init">
+									<h5 class="mb-0">
+										<button class="btn btn-link" data-toggle="collapse"
+											data-target="#collapseChildFour" aria-expanded="true"
+											aria-controls="collapseChildFour">
+											<h5 style="color:black">WinPython</h5>
+										</button>
+									</h5>
+								</div>
+							</div>
+							<div id="collapseChildFour" class="collapse" aria-labelledby="child_four_init"
+								data-parent="#child4">
+								<div class="card-body">
+									<p>
+										WinPython is a Python distribution that is specifically created for the Windows
+										operating system.
+										Earlier versions of CPython weren’t designed for Windows resulting in bugs.
+										While CPython is now very stable
+										on Windows it still has a few benefits. It comes prepackaged with some of the
+										more popular Data Science
+										and Machine Learning libraries (NumPy, SciPy, Pandas, etc.) and bundled features
+										like a C and C++ compiler.
+									</p>
+								</div>
+							</div>
+						</div>
+						<p>
+							A few other interesting Python options can be found
+							<a href="https://hackr.io/blog/best-python-compilers">here (Compilers)</a>
+							or
+							<a href="https://hackr.io/blog/python-interpreters">here (Interpreters)</a>
+							.
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
+		<br>
+		<h4>This is all a little overwhelming. What about all of these online compilers? Can I just use those?</h4>
+		<p>
+			Online compilers are fantastic for simple debugging and testing, but it's best to start using and
+			familiarlizing
+			yourself with creating a local development environment. Virtually all reasonably sized projects - for
+			school,
+			hobby, and work - require familiarity with a local development environment. With all
+			the options out there, choosing what to use (especially on Windows) can be quite overwhelming, but hopefully
+			this page
+			gives an idea of some of the options out there.
+		</p>
+		<p>
+			And - speaking from a Windows perspective - setting up a development environment
+			within a Linux Subsystem can be much easier that delving into the world of Windows development.
+			This is especially true if collaborating with someone working on a MacOS or Linux system.
+		</p>
 	</div>
-</footer>
 
-<!-- Script Source Files -->
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row text-light text-center py-4 justify-content-center">
+				<div class="col-sm-10 col-md-8 col-lg-6">
+					<a href="index.html" style="font-weight: 700; font-size: 1.5rem; text-transform: uppercase;">ECE
+						39595 Knowledgebase</a>
+					<p>Honors Project for <a
+							href="https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=579&show=true&type=undergrad">ECE
+							39595</a> (Object-Oriented Programming using C++ and Java) at <a
+							href="https://purdue.edu">Purdue University</a> for Fall 2020.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 
-<!-- jQuery -->
-<script src="js/jquery-3.5.1.min.js"></script>
-<!-- Bootstrap 4.5 JS -->
-<script src="js/bootstrap.min.js"></script>
-<!-- Popper JS -->
-<script src="js/popper.min.js"></script>
-<!-- Font Awesome -->
-<script src="js/all.min.js"></script>
+	<!-- Script Source Files -->
 
-<!-- End Script Source Files -->
+	<!-- jQuery -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<!-- Bootstrap 4.5 JS -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Popper JS -->
+	<script src="js/popper.min.js"></script>
+	<!-- Font Awesome -->
+	<script src="js/all.min.js"></script>
+
+	<!-- End Script Source Files -->
 </body>
