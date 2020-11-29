@@ -104,7 +104,7 @@
 		</a>
 		<p>Below are the languages that this page will be focusing on. Each section will give a brief synopsis
 			of the compilation/interpretation process for the langauge and provide some information on getting started
-			with a compiler. 
+			with a compiler.
 		</p>
 		<div id="accordion">
 			<div class="card">
@@ -140,28 +140,34 @@
 										</button>
 									</h5>
 								</div>
-							</div>
-							<div id="collapseChildOne" class="collapse" aria-labelledby="child_one_init"
-								data-parent="#child1">
-								<div class="card-body">
-									<p>The G++ compiler can be easily used in a MacOS or Linux environment, but it's a
-										little trickier for Windows.
-										Therefore, the easiest way to develop quickly in C++ on a Windows machine is to
-										use a Windows Subsystem for Linux</p>
-									<a href="wsl.html" class="nav-link">Using a Windows Subsystem for Linux</a>
-									<p>After you have your MacOS or Linux environment up and running, this is all that's
-										needed to start developing</p>
-									<h5>Linux:</h5>
-									<pre>$ sudo apt install build-essential</pre>
-									<h5>MacOS:</h5>
-									<p>If XCode is installed, a g++ C++ compiler is installed with it. If not - or if
-										you want the most updated version - this command can be used</p>
-									<pre>brew install gcc</pre>
-									<p>And there you have it! Compile your program using:</p>
-									<pre>g++ [src].cpp</pre>
-									<p>Then run it using:</p>
-									<pre>./[executable]</pre>
-									<p>And you're developing in C++!</p>
+
+								<div id="collapseChildOne" class="collapse" aria-labelledby="child_one_init"
+									data-parent="#child1">
+									<div class="card-body">
+										<p>The G++ compiler can be easily used in a MacOS or Linux environment, but it's
+											a
+											little trickier for Windows.
+											Therefore, the easiest way to develop quickly in C++ on a Windows machine is
+											to
+											use a Windows Subsystem for Linux</p>
+										<a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10"
+											class="nav-link">Using a Windows Subsystem for Linux</a>
+										<p>After you have your MacOS or Linux environment up and running, this is all
+											that's
+											needed to start developing</p>
+										<h5>Linux:</h5>
+										<pre>$ sudo apt install build-essential</pre>
+										<h5>MacOS:</h5>
+										<p>If XCode is installed, a g++ C++ compiler is installed with it. If not - or
+											if
+											you want the most updated version - this command can be used</p>
+										<pre>brew install gcc</pre>
+										<p>And there you have it! Compile your program using:</p>
+										<pre>g++ [src].cpp</pre>
+										<p>Then run it using:</p>
+										<pre>./[executable]</pre>
+										<p>And you're developing in C++!</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -176,36 +182,41 @@
 										</button>
 									</h5>
 								</div>
-							</div>
-							<div id="collapseChildTwo" class="collapse" aria-labelledby="child_two_init"
-								data-parent="#child2">
-								<div class="card-body">
-									<h5>What is Clang?</h5>
-									<p>
-										Clang is a C, C++, Objective-C, or Objective-C++ compiler that is compiled in
-										C++ based on LLVM and released under the Apache 2.0 license.
-										Clang is mainly used to provide performance superior to that of GCC. Refer to
+								<div id="collapseChildTwo" class="collapse" aria-labelledby="child_two_init"
+									data-parent="#child2">
+									<div class="card-body">
+										<h5>What is Clang?</h5>
+										<p>
+											Clang is a C, C++, Objective-C, or Objective-C++ compiler that is compiled
+											in
+											C++ based on LLVM and released under the Apache 2.0 license.
+											Clang is mainly used to provide performance superior to that of GCC. Refer
+											to
+											<a
+												href="https://alibabatech.medium.com/gcc-vs-clang-llvm-an-in-depth-comparison-of-c-c-compilers-899ede2be378">this
+												article</a>
+											for an in depth comparison of Clang/Clang++ and GNU/g++.
+										</p>
+										<p>The
+											<a
+												href="https://releases.llvm.org/11.0.0/tools/clang/docs/UsersManual.html">Clang
+												User Manual</a>
+											is a good starting place for figuring out if you'd like to use Clang versus
+											a
+											different compiler.
+										</p>
+										<p>At this point, everything becomes very platform and development environment
+											specific, so several relevant tutorials for using Clang are linked below</p>
+										<a href="https://code.visualstudio.com/docs/cpp/config-clang-mac">Clang for
+											MacOS
+											and Visual Studio Code</a>
+										<h6></h6>
 										<a
-											href="https://alibabatech.medium.com/gcc-vs-clang-llvm-an-in-depth-comparison-of-c-c-compilers-899ede2be378">this
-											article</a>
-										for an in depth comparison of Clang/Clang++ and GNU/g++.
-									</p>
-									<p>The
-										<a href="https://releases.llvm.org/11.0.0/tools/clang/docs/UsersManual.html">Clang
-											User Manual</a>
-										is a good starting place for figuring out if you'd like to use Clang versus a
-										different compiler.
-									</p>
-									<p>At this point, everything becomes very platform and development environment
-										specific, so several relevant tutorials for using Clang are linked below</p>
-									<a href="https://code.visualstudio.com/docs/cpp/config-clang-mac">Clang for MacOS
-										and Visual Studio Code</a>
-									<h6></h6>
-									<a
-										href="https://docs.microsoft.com/en-us/cpp/build/clang-support-msbuild?view=msvc-160">Clang
-										for Windows and VSCode</a>
-									<p>But for Linux? Simple, as always:
-									<pre>$sudo apt install clang</pre> is all you need.</p>
+											href="https://docs.microsoft.com/en-us/cpp/build/clang-support-msbuild?view=msvc-160">Clang
+											for Windows and VSCode</a>
+										<p>But for Linux? Simple, as always:
+										<pre>$sudo apt install clang</pre> is all you need.</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -385,18 +396,20 @@
 										</button>
 									</h5>
 								</div>
-							</div>
-							<div id="collapseChildOne" class="collapse" aria-labelledby="child_one_init"
-								data-parent="#child1">
-								<div class="card-body">
-									<p>
-										CPython is the default interpretation that is installed when you download Python
-										from
-										<a href="python.org">python.org</a>
-										. Written in C, CPython follows the traditional formal of compiling source into
-										bytecode
-										and interpreting that bytecode.
-									</p>
+								<div id="collapseChildOne" class="collapse" aria-labelledby="child_one_init"
+									data-parent="#child1">
+									<div class="card-body">
+										<p>
+											CPython is the default interpretation that is installed when you download
+											Python
+											from
+											<a href="python.org">python.org</a>
+											. Written in C, CPython follows the traditional formal of compiling source
+											into
+											bytecode
+											and interpreting that bytecode.
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -411,17 +424,18 @@
 										</button>
 									</h5>
 								</div>
-							</div>
-							<div id="collapseChildTwo" class="collapse" aria-labelledby="child_two_init"
-								data-parent="#child2">
-								<div class="card-body">
-									<p>
-										PyPy is heralded as a faster Python interpreter - in fact, it is
-										<a href="https://speed.pypy.org/">on average 4.3x faster than CPython.</a>
-										PyPy maintains its speed by using JIT (Just-in-Time) compilation and other
-										behind the scenes optimization. In most cases, you're able to swap out CPython
-										for PyPy without significant changes being required.
-									</p>
+								<div id="collapseChildTwo" class="collapse" aria-labelledby="child_two_init"
+									data-parent="#child2">
+									<div class="card-body">
+										<p>
+											PyPy is heralded as a faster Python interpreter - in fact, it is
+											<a href="https://speed.pypy.org/">on average 4.3x faster than CPython.</a>
+											PyPy maintains its speed by using JIT (Just-in-Time) compilation and other
+											behind the scenes optimization. In most cases, you're able to swap out
+											CPython
+											for PyPy without significant changes being required.
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -436,19 +450,21 @@
 										</button>
 									</h5>
 								</div>
-							</div>
-							<div id="collapseChildThree" class="collapse" aria-labelledby="child_three_init"
-								data-parent="#child3">
-								<div class="card-body">
-									<p>
-										Brython is a Python compiler that converts Python code into JavaScript code.
-										Brython is built for the HTML5 environment and has a built in interface to the
-										DOM (Document Object Model) objects and events. It comes prepackaged with
-										relevant
-										libraries, suppports almost all features of CPython, and provides support for
-										all
-										modern browsers.
-									</p>
+								<div id="collapseChildThree" class="collapse" aria-labelledby="child_three_init"
+									data-parent="#child3">
+									<div class="card-body">
+										<p>
+											Brython is a Python compiler that converts Python code into JavaScript code.
+											Brython is built for the HTML5 environment and has a built in interface to
+											the
+											DOM (Document Object Model) objects and events. It comes prepackaged with
+											relevant
+											libraries, suppports almost all features of CPython, and provides support
+											for
+											all
+											modern browsers.
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -463,20 +479,23 @@
 										</button>
 									</h5>
 								</div>
-							</div>
-							<div id="collapseChildFour" class="collapse" aria-labelledby="child_four_init"
-								data-parent="#child4">
-								<div class="card-body">
-									<p>
-										WinPython is a Python distribution that is specifically created for the Windows
-										operating system.
-										Earlier versions of CPython weren’t designed for Windows resulting in bugs.
-										While CPython is now very stable
-										on Windows it still has a few benefits. It comes prepackaged with some of the
-										more popular Data Science
-										and Machine Learning libraries (NumPy, SciPy, Pandas, etc.) and bundled features
-										like a C and C++ compiler.
-									</p>
+								<div id="collapseChildFour" class="collapse" aria-labelledby="child_four_init"
+									data-parent="#child4">
+									<div class="card-body">
+										<p>
+											WinPython is a Python distribution that is specifically created for the
+											Windows
+											operating system.
+											Earlier versions of CPython weren’t designed for Windows resulting in bugs.
+											While CPython is now very stable
+											on Windows it still has a few benefits. It comes prepackaged with some of
+											the
+											more popular Data Science
+											and Machine Learning libraries (NumPy, SciPy, Pandas, etc.) and bundled
+											features
+											like a C and C++ compiler.
+										</p>
+									</div>
 								</div>
 							</div>
 						</div>
