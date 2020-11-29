@@ -46,7 +46,10 @@
 
 <div class="container" id="overview">
 	<a href="#overview"><h2>Overview</h2></a>
-	<p>This section will give some background information regarding compilers and a brief overview of how to choose and install a compiler/Integrated Development Environment (IDE) for your programming needs.</p>
+	<p>
+		This section will give some background information regarding compilers/interpreters for different languages and platforms.  
+		It will also provide a brief overview of how to choose and install certain more popular compilers.
+	</p>
 </div>
 
 <div class="container" id="inter_comp">
@@ -55,19 +58,23 @@
 		First, a little background information.
 	</p>
 	<p>
-		There are two typical ways that code is executed, and that is dependent on if the language is 
-		compiled or interpreted (although there is some grey area). 
+		Programming langauges are typically classified as either compiled or interpreted based on the 
+		process needed to run a program.  Although the difference between compiled and interpreted languages 
+		can get blurry with all the different compilers/interpreters out there, it's a good starting point to 
+		understand how code actually runs. 
 	</p>
 	<p>
-		Code written in compiled languages are executed directly on a computer’s processer where a 
-		compiler turns the code into machine language that the processor can use.  Then, at runtime 
-		the machine language is used to execute your program.
+		Programs written in <b>compiled</b> languages are executed directly on the computer’s processer where a 
+		compiler turns the code into machine language that the processor can understand.  Then, at runtime, 
+		the machine language is used to execute your program.  Compiled languages require a two step process to run
+		a program.
 	</p>
 	<p>
-		Interpreted languages, on the other hand, are programming languages that are not machine 
+		<b>Interpreted</b> languages, on the other hand, are programming languages that are not machine 
 		code before runtime (no separate compilation step).  Therefore, the code is translated to 
 		machine language at runtime when the code is being executed, potentially slowing down the 
-		process.
+		process.  The easiest way to differentiate it from a compiled langauge is that running a program 
+		written in an interpreted language is normally a one step process.
 	</p>
 </div>
 
@@ -77,24 +84,35 @@
 		Another important part of setup- after choosing which language you’ll be programming in- 
 		includes figuring out how exactly you’re going to run that code.  With so many options out 
 		there, installing a compiler can be a little daunting for a new programmer.  This section 
-		will go over some options for C++, Java, and even Python compilers as well as discussing 
-		the uses of online compilers.
+		will go over some options for C++, Java, and Python compilers and provide some resources to
+		get started.
 	</p>
 </div>
 
 <div class = "container" id = "compiler_languages">
 	<a href="compiler_languages"><h2>Languages</h2></a>
-	<p>Below are the languages that this page will be focusing on</p>
+	<p>Below are the languages that this page will be focusing on.  Each section will give a brief synopsis 
+		of the compilation/interpretation process for the langauge and provide some information on getting started 
+		with a compiler.
+	</p>
 	<div id="accordion">
 		<div class = "card">
 			<div class = "card-header" id="cpp_init">
 				<h5 class="mb-0">
 					<button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-					  <h4 style="color:black">C++/C Compilers</h4>
+					  <h4 style="color:black">C++ Compilers</h4>
 					</button>
 				</h5> 
 			</div>
 			<div id="collapseOne" class="collapse" aria-labelledby="cpp_init" data-parent="#accordion">
+				<h5>Is C++ compiled or interpreted?</h5>
+				<p>
+					C++ is a traditional compiled langauge, in that it's a two step process where .o files containing machine code are created
+					from source code.  Then, those .o files are compiled into an executable that can be run by the user.  C++ is also a language
+					where the compilation process is platform dependent.  The .o files generated on a Windows system cannot be used 
+					by a Linux or Mac system, and vice versa.
+				</p>
+				<p>Several specific C++ compilers are explored below</p>
 				<div class="card-body" id="child1">
 					<div class="card">
 						<div class = "card-header" id="child_one_init">
@@ -106,11 +124,20 @@
 						</div>
 						<div id="collapseChildOne" class="collapse" aria-labelledby="child_one_init" data-parent="#child1">
 						  <div class = "card-body">
-							<p>g++ compiler instructions</p>
-							<p>A very simple way to get started with all languages, especially C++/C, is to use g++ in a terminal environment.  If you're developing on a Windows machine, you'll need to install a Windows Subsystem for Linux to do so.</p>
+							<p>The G++ compiler can be easily used in a MacOS or Linux environment, but it's a little trickier for Windows. 
+								Therefore, the easiest way to develop quickly in C++ on a Windows machine is to use a Windows Subsystem for Linux</p>
 							<a href="wsl.html" class="nav-link">Using a Windows Subsystem for Linux</a>
-							<p>After you have your environment up and running, all you need to do is type this:</p>
-							<pre>lol</pre> 
+							<p>After you have your MacOS or Linux environment up and running, this is all that's needed to start developing</p>
+							<h5>Linux:</h5>
+							<pre>$ sudo apt install build-essential</pre> 
+							<h5>MacOS:</h5>
+							<p>If XCode is installed, a g++ C++ compiler is installed with it.  If not - or if you want the most updated version - this command can be used</p>
+							<pre>brew install gcc</pre> 
+							<p>And there you have it! Compile your program using:</p>
+							<pre>g++ [src].cpp</pre>
+							<p>Then run it using:</p>
+							<pre>./[executable]</pre>
+							<p>And you're developing in C++!</p>
 						  </div> 
 						</div>
 					</div>
@@ -124,8 +151,23 @@
 						</div>
 						<div id="collapseChildTwo" class="collapse" aria-labelledby="child_two_init" data-parent="#child1">
 						  <div class = "card-body">
-							<p>clang/clang++</p> 
-						  </div> 
+							<h5>What is Clang?</h5> 
+							<p>
+								Clang is a C, C++, Objective-C, or Objective-C++ compiler that is compiled in C++ based on LLVM and released under the Apache 2.0 license. 
+								Clang is mainly used to provide performance superior to that of GCC. Refer to 
+								<a href="https://alibabatech.medium.com/gcc-vs-clang-llvm-an-in-depth-comparison-of-c-c-compilers-899ede2be378" >this article</a>
+								for an in depth comparison of Clang/Clang++ and GNU/g++.
+							</p>
+							<p>The
+								<a href="https://releases.llvm.org/11.0.0/tools/clang/docs/UsersManual.html">Clang User Manual</a>
+								is a good starting place for figuring out if you'd like to use Clang versus a different compiler.
+							</p>
+							<p>At this point, everything becomes very platform and development environment specific, so several relevant tutorials for using Clang are linked below</p>	
+							<a href="https://code.visualstudio.com/docs/cpp/config-clang-mac">Clang for MacOS and Visual Studio Code</a>
+							<h6></h6>
+							<a href="https://docs.microsoft.com/en-us/cpp/build/clang-support-msbuild?view=msvc-160">Clang for Windows and VSCode</a>
+							<p>But for Linux? Simple, as always: <pre>$sudo apt install clang</pre> is all you need.</p>
+						</div> 
 						</div>
 					</div>
 					<div class="card">
@@ -138,7 +180,15 @@
 						</div>
 						<div id="collapseChildThree" class="collapse" aria-labelledby="child_three_init" data-parent="#child1">
 						  <div class = "card-body">
-							<p>mingw for windows</p> 
+							<p>Now, we'll discuss a Windows specific C++ installation: MINGW</p> 
+							<h5>What is MINGW?</h5>
+							<p>MINGW was created to support GCC on Windows systems. This <a href="https://code.visualstudio.com/docs/cpp/config-mingw">tutorial</a>
+								demonstrates how to use MINGW as a compiler with Visual Studio Code, and is very useful for getting set up on a Windows system.
+							</p>
+							<p>If you'd like to use MINGW with Visual Studio this 
+								<a href="https://devblogs.microsoft.com/cppblog/using-mingw-and-cygwin-with-visual-cpp-and-open-folder/#use-mingw-with-visual-studio">tutorial</a>
+								can point you in the right direction.
+							</p>
 						  </div> 
 						</div>
 					</div>
@@ -152,7 +202,7 @@
 						</div>
 						<div id="collapseChildFour" class="collapse" aria-labelledby="child_four_init" data-parent="#child1">
 						  <div class = "card-body">
-							<p>xcode for mac</p> 
+							<p>As touched on in the Simple G++ section above, installing XCode will be enough to have a base C++ development environment on a Mac.</p> 
 						  </div> 
 						</div>
 					</div>
@@ -171,6 +221,7 @@
 				<div class="card-body" id = "child2">
 					<p>
 						Java is a little different than C++, as it is a language that is neither compiled nor interpreted.  
+						(Alternatively, some say it's both compiled and interpreted).
 						In C or C++, the executable files generated after compilation can only be run on that specific 
 						operating system (a C++ program compiled on a Mac can only run on a Mac).                      
 					</p>
@@ -180,63 +231,32 @@
 						independence.                     
 					</p>
 					<p>
-						While a C/C++ compiler creates an object file, the Java compiler (often referred to as the Java 
-						Virtual Machine) creates a bytecode file, which is an object file for the virtual machine.                    
+						While a C/C++ compiler creates an object file, the Java compiler 
+						creates a bytecode file, which is an object file for the virtual machine 
+						(often referred to as the Java Virtual Machine or JVM).                    
+					</p>
+					<p>
+						The reason why Java isn't classified as strictly compiled or interpreted is partially because of how dependent
+						it is on the execution environment.  In most cases, JVMs use a technique called Just-in-Time (JIT) compilation 
+						to compile the bytecode to machine code understood by the processor at runtime - a mix between strict compilation 
+						or interpretation.  Additionally it is technically possible to run Java as strictly interpreted or compiled.  Now,
+						we can see how blurred the lines can get between compiled and interpreted langauges with modern execution environments.
 					</p>
 					<h4>
-						The steps for compiling and running a program in Java work like this:
+						To summarize, the high level steps for compiling and running a program in Java work like this:
 					</h4>
 					<ol>
-						<li>Write in IDE</li>
-						<li>JVM</li>
-						<li>execute with java on platform</li>
+						<li>Write source code</li>
+						<li>Compile source code to .class files (platform independent)</li>
+						<li>Execute .class files with JVM (platform specific)</li>
 					</ol>
 					<p></p>
-					<p>To develop in Java, it's highly reccomended to use an IDE (Integrated Development Environment).  Below are a few of the more popular IDEs and some of their pros and cons, but any one will do.</p>
-					<div class="card">
-						<div class = "card-header" id="child_two_init">
-							<h5 class="mb-0">
-								<button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildFive" aria-expanded="true" aria-controls="collapseChildFive">
-									<h5 style="color:black">Eclipse</h5>
-								</button>   
-							</h5> 
-						</div>
-						<div id="collapseChildFive" class="collapse" aria-labelledby="child_two_init" data-parent="#child2">
-							<div class = "card-body">
-							  <p>g++ compiler instructions</p>
-							  <p>A very simple way to get started with all languages, especially C++/C, is to use g++ in a terminal environment.  If you're developing on a Windows machine, you'll need to install a Windows Subsystem for Linux to do so.</p>
-							  <a href="wsl.html" class="nav-link">Using a Windows Subsystem for Linux</a>
-							  <p>After you have your environment up and running, all you need to do is type this:</p>
-							  <pre>lol</pre> 
-							</div> 
-						</div> 
-					</div>
-					<div class="card">
-						<div class = "card-header" id="child_two_init">
-							<h5 class="mb-0">
-								<button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildSix" aria-expanded="true" aria-controls="collapseChildSix">
-									<h5 style="color:black">IntelliJ Idea</h5>
-								</button>   
-							</h5> 
-						</div>
-						<div id="collapseChildSix" class="collapse" aria-labelledby="child_two_init" data-parent="#child2">
-							<div class = "card-body">
-							</div> 
-						</div> 
-					</div>
-					<div class="card">
-						<div class = "card-header" id="child_two_init">
-							<h5 class="mb-0">
-								<button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildSeven" aria-expanded="true" aria-controls="collapseChildSeven">
-									<h5 style="color:black">NetBeans</h5>
-								</button>   
-							</h5> 
-						</div>
-						<div id="collapseChildSeven" class="collapse" aria-labelledby="child_two_init" data-parent="#child2">
-							<div class = "card-body">
-							</div> 
-						</div> 
-					</div>
+					<p>To develop in Java, it's highly reccomended to use an IDE (Integrated Development Environment). Some of the more popular IDEs are explored on 
+						<a href="file:///C:/Users/aliaa/Documents/cteam-honorsproject/setup.html#java-ide">our Setup page.</a>
+						All the options can be a little overwhelming but once you choose one and commit to using it, it'll become 
+						second nature in no time.
+					</p>
+					
 					<h5></h5>
 					<h4>Can I run a Java program from the terminal?</h4>
 					<p>Yes, you definitely can, but it's not customary given the industry standard of using IDEs for Java development.  However, if you'd like to, some resources are linked below</p>
@@ -260,7 +280,7 @@
 				<div class="card-body">
 				  <h5>Is Python interpreted or compiled?</h5>
 				  <p>
-					  Answer? It depends. Python is officially classified as an interpreted language, as it  
+					  Answer: It depends. Python is officially classified as an interpreted language, as it  
 					  generates bytecode (machine langauge) from your source code and and executes the bytecode
 					  in one step.
 				  </p>
@@ -278,10 +298,28 @@
 					  can be blurry because of the presence of the bytecode compiler. This means that source files 
 					  can be run directly without explicitly creating an executable which is then run."
 				  </p>
+				  <p>
+					  Finally, there are several interesting Python compilers designed to work with other languages, 
+					  and a few will be discussed below. TODO EN LA MANANA
+				  </p>
 				</div>
 			</div>
 		</div>
 	</div>
+	<h6></h6>
+	<h4>This is all a little overwhelming.  What about all of these online compilers?  Can I just use those?</h4>
+	<p>
+		Online compilers are fantastic for simple debugging and testing, but it's best to start using and familiarlizing 
+		yourself with creating a local development environment. Virtually all reasonably sized projects - for school, 
+		hobby, and work - require familiarity with a local development environment. With all 
+		the options out there, choosing what to use (especially on Windows) can be quite overwhelming, but hopefully this page 
+		gives an idea of some of the options out there.  
+	</p>
+	<p>
+		And - speaking from a Windows perspective - setting up a development environment
+		within a Linux Subsystem can be much easier that delving into the world of Windows development.
+		This is especially true if collaborating with someone working on a MacOS or Linux system.
+	</p>
 </div>
 
 <!-- Footer -->
