@@ -89,7 +89,7 @@
 	</p>
 </div>
 
-<div class = "container" id = "compiler_languages">
+<div class = "container mb-5" id = "compiler_languages">
 	<a href="compiler_languages"><h2>Languages</h2></a>
 	<p>Below are the languages that this page will be focusing on.  Each section will give a brief synopsis 
 		of the compilation/interpretation process for the langauge and provide some information on getting started 
@@ -105,105 +105,113 @@
 				</h5> 
 			</div>
 			<div id="collapseOne" class="collapse" aria-labelledby="cpp_init" data-parent="#accordion">
-				<h5>Is C++ compiled or interpreted?</h5>
-				<p>
-					C++ is a traditional compiled langauge, in that it's a two step process where .o files containing machine code are created
-					from source code.  Then, those .o files are compiled into an executable that can be run by the user.  C++ is also a language
-					where the compilation process is platform dependent.  The .o files generated on a Windows system cannot be used 
-					by a Linux or Mac system, and vice versa.
-				</p>
-				<p>Several specific C++ compilers are explored below</p>
-				<div class="card-body" id="child1">
-					<div class="card">
-						<div class = "card-header" id="child_one_init">
-						  <h5 class="mb-0">
-							  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildOne" aria-expanded="true" aria-controls="collapseChildOne">
-								<h5 style="color:black">Simple G++</h5>
-							  </button>
-						  </h5> 
+				<div class="card-body">
+					<h5>Is C++ compiled or interpreted?</h5>
+					<p>
+						C++ is a traditional compiled langauge, in that it's a two step process where .o files containing machine code are created
+						from source code.  Then, those .o files are compiled into an executable that can be run by the user.  C++ is also a language
+						where the compilation process is platform dependent.  The .o files generated on a Windows system cannot be used 
+						by a Linux or Mac system, and vice versa.
+					</p>
+					<p>Several specific C++ compilers are explored below</p>
+					<div id="child1">
+						<div class="card">
+							<div class = "card-header" id="child_one_init">
+								<h5 class="mb-0">
+									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildOne" aria-expanded="true" aria-controls="collapseChildOne">
+										<h5 style="color:black">Simple G++</h5>
+									</button>
+								</h5>
+							</div>
 						</div>
 						<div id="collapseChildOne" class="collapse" aria-labelledby="child_one_init" data-parent="#child1">
-						  <div class = "card-body">
-							<p>The G++ compiler can be easily used in a MacOS or Linux environment, but it's a little trickier for Windows. 
-								Therefore, the easiest way to develop quickly in C++ on a Windows machine is to use a Windows Subsystem for Linux</p>
-							<a href="wsl.html" class="nav-link">Using a Windows Subsystem for Linux</a>
-							<p>After you have your MacOS or Linux environment up and running, this is all that's needed to start developing</p>
-							<h5>Linux:</h5>
-							<pre>$ sudo apt install build-essential</pre> 
-							<h5>MacOS:</h5>
-							<p>If XCode is installed, a g++ C++ compiler is installed with it.  If not - or if you want the most updated version - this command can be used</p>
-							<pre>brew install gcc</pre> 
-							<p>And there you have it! Compile your program using:</p>
-							<pre>g++ [src].cpp</pre>
-							<p>Then run it using:</p>
-							<pre>./[executable]</pre>
-							<p>And you're developing in C++!</p>
-						  </div> 
+							<div class = "card-body">
+								<p>The G++ compiler can be easily used in a MacOS or Linux environment, but it's a little trickier for Windows. 
+									Therefore, the easiest way to develop quickly in C++ on a Windows machine is to use a Windows Subsystem for Linux</p>
+								<a href="wsl.html" class="nav-link">Using a Windows Subsystem for Linux</a>
+								<p>After you have your MacOS or Linux environment up and running, this is all that's needed to start developing</p>
+								<h5>Linux:</h5>
+								<pre>$ sudo apt install build-essential</pre> 
+								<h5>MacOS:</h5>
+								<p>If XCode is installed, a g++ C++ compiler is installed with it.  If not - or if you want the most updated version - this command can be used</p>
+								<pre>brew install gcc</pre> 
+								<p>And there you have it! Compile your program using:</p>
+								<pre>g++ [src].cpp</pre>
+								<p>Then run it using:</p>
+								<pre>./[executable]</pre>
+								<p>And you're developing in C++!</p>
+							</div> 
 						</div>
 					</div>
-					<div class="card">
-						<div class = "card-header" id="child_two_init">
-						  <h5 class="mb-0">
-							  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildTwo" aria-expanded="true" aria-controls="collapseChildTwo">
-								<h5 style="color:black">Clang/Clang++</h5>
-							  </button>
-						  </h5> 
+					<div id="child2">
+						<div class="card">
+							<div class = "card-header" id="child_two_init">
+								<h5 class="mb-0">
+									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildTwo" aria-expanded="true" aria-controls="collapseChildTwo">
+										<h5 style="color:black">Clang/Clang++</h5>
+									</button>
+								</h5>
+							</div>
 						</div>
-						<div id="collapseChildTwo" class="collapse" aria-labelledby="child_two_init" data-parent="#child1">
-						  <div class = "card-body">
-							<h5>What is Clang?</h5> 
-							<p>
-								Clang is a C, C++, Objective-C, or Objective-C++ compiler that is compiled in C++ based on LLVM and released under the Apache 2.0 license. 
-								Clang is mainly used to provide performance superior to that of GCC. Refer to 
-								<a href="https://alibabatech.medium.com/gcc-vs-clang-llvm-an-in-depth-comparison-of-c-c-compilers-899ede2be378" >this article</a>
-								for an in depth comparison of Clang/Clang++ and GNU/g++.
-							</p>
-							<p>The
-								<a href="https://releases.llvm.org/11.0.0/tools/clang/docs/UsersManual.html">Clang User Manual</a>
-								is a good starting place for figuring out if you'd like to use Clang versus a different compiler.
-							</p>
-							<p>At this point, everything becomes very platform and development environment specific, so several relevant tutorials for using Clang are linked below</p>	
-							<a href="https://code.visualstudio.com/docs/cpp/config-clang-mac">Clang for MacOS and Visual Studio Code</a>
-							<h6></h6>
-							<a href="https://docs.microsoft.com/en-us/cpp/build/clang-support-msbuild?view=msvc-160">Clang for Windows and VSCode</a>
-							<p>But for Linux? Simple, as always: <pre>$sudo apt install clang</pre> is all you need.</p>
-						</div> 
-						</div>
-					</div>
-					<div class="card">
-						<div class = "card-header" id="child_three_init">
-						  <h5 class="mb-0">
-							  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildThree" aria-expanded="true" aria-controls="collapseChildThree">
-								<h5 style="color:black">MINGW (For Windows)</h5>
-							  </button>
-						  </h5> 
-						</div>
-						<div id="collapseChildThree" class="collapse" aria-labelledby="child_three_init" data-parent="#child1">
-						  <div class = "card-body">
-							<p>Now, we'll discuss a Windows specific C++ installation: MINGW</p> 
-							<h5>What is MINGW?</h5>
-							<p>MINGW was created to support GCC on Windows systems. This <a href="https://code.visualstudio.com/docs/cpp/config-mingw">tutorial</a>
-								demonstrates how to use MINGW as a compiler with Visual Studio Code, and is very useful for getting set up on a Windows system.
-							</p>
-							<p>If you'd like to use MINGW with Visual Studio this 
-								<a href="https://devblogs.microsoft.com/cppblog/using-mingw-and-cygwin-with-visual-cpp-and-open-folder/#use-mingw-with-visual-studio">tutorial</a>
-								can point you in the right direction.
-							</p>
-						  </div> 
+						<div id="collapseChildTwo" class="collapse" aria-labelledby="child_two_init" data-parent="#child2">
+							<div class = "card-body">
+								<h5>What is Clang?</h5> 
+								<p>
+									Clang is a C, C++, Objective-C, or Objective-C++ compiler that is compiled in C++ based on LLVM and released under the Apache 2.0 license. 
+									Clang is mainly used to provide performance superior to that of GCC. Refer to 
+									<a href="https://alibabatech.medium.com/gcc-vs-clang-llvm-an-in-depth-comparison-of-c-c-compilers-899ede2be378" >this article</a>
+									for an in depth comparison of Clang/Clang++ and GNU/g++.
+								</p>
+								<p>The
+									<a href="https://releases.llvm.org/11.0.0/tools/clang/docs/UsersManual.html">Clang User Manual</a>
+									is a good starting place for figuring out if you'd like to use Clang versus a different compiler.
+								</p>
+								<p>At this point, everything becomes very platform and development environment specific, so several relevant tutorials for using Clang are linked below</p>	
+								<a href="https://code.visualstudio.com/docs/cpp/config-clang-mac">Clang for MacOS and Visual Studio Code</a>
+								<h6></h6>
+								<a href="https://docs.microsoft.com/en-us/cpp/build/clang-support-msbuild?view=msvc-160">Clang for Windows and VSCode</a>
+								<p>But for Linux? Simple, as always: <pre>$sudo apt install clang</pre> is all you need.</p>
+							</div> 
 						</div>
 					</div>
-					<div class="card">
-						<div class = "card-header" id="child_four_init">
-						  <h5 class="mb-0">
-							  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildFour" aria-expanded="true" aria-controls="collapseChildFour">
-								<h5 style="color:black">XCode C++ (For MacOS)</h5>
-							  </button>
-						  </h5> 
+					<div id="child3">
+						<div class="card">
+							<div class = "card-header" id="child_three_init">
+								<h5 class="mb-0">
+									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildThree" aria-expanded="true" aria-controls="collapseChildThree">
+										<h5 style="color:black">MINGW (For Windows)</h5>
+									</button>
+								</h5> 
+							</div>
+							<div id="collapseChildThree" class="collapse" aria-labelledby="child_three_init" data-parent="#child3">
+								<div class = "card-body">
+									<p>Now, we'll discuss a Windows specific C++ installation: MINGW</p> 
+									<h5>What is MINGW?</h5>
+									<p>MINGW was created to support GCC on Windows systems. This <a href="https://code.visualstudio.com/docs/cpp/config-mingw">tutorial</a>
+										demonstrates how to use MINGW as a compiler with Visual Studio Code, and is very useful for getting set up on a Windows system.
+									</p>
+									<p>If you'd like to use MINGW with Visual Studio this 
+										<a href="https://devblogs.microsoft.com/cppblog/using-mingw-and-cygwin-with-visual-cpp-and-open-folder/#use-mingw-with-visual-studio">tutorial</a>
+										can point you in the right direction.
+									</p>
+								</div> 
+							</div>
 						</div>
-						<div id="collapseChildFour" class="collapse" aria-labelledby="child_four_init" data-parent="#child1">
-						  <div class = "card-body">
-							<p>As touched on in the Simple G++ section above, installing XCode will be enough to have a base C++ development environment on a Mac.</p> 
-						  </div> 
+					</div>
+					<div id="child4">
+						<div class="card">
+							<div class = "card-header" id="child_four_init">
+								<h5 class="mb-0">
+									<button class="btn btn-link" data-toggle="collapse" data-target="#collapseChildFour" aria-expanded="true" aria-controls="collapseChildFour">
+										<h5 style="color:black">XCode C++ (For MacOS)</h5>
+									</button>
+								</h5> 
+							</div>
+							<div id="collapseChildFour" class="collapse" aria-labelledby="child_four_init" data-parent="#child4">
+								<div class = "card-body">
+									<p>As touched on in the Simple G++ section above, installing XCode will be enough to have a base C++ development environment on a Mac.</p> 
+								</div> 
+							</div>
 						</div>
 					</div>
 				</div>
@@ -306,7 +314,7 @@
 			</div>
 		</div>
 	</div>
-	<h6></h6>
+	<br>
 	<h4>This is all a little overwhelming.  What about all of these online compilers?  Can I just use those?</h4>
 	<p>
 		Online compilers are fantastic for simple debugging and testing, but it's best to start using and familiarlizing 
