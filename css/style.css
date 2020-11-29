@@ -15,8 +15,8 @@ body {
 }
 
 h2, h3, h4, h5, h6 {
-	font-family: 'acumin-pro-semi-condensed', 'Franklin Gothic Condensed', sans-serif;
-	font-weight: 600;
+	font-family: 'acumin-pro-condensed', 'Franklin Gothic Condensed', sans-serif;
+	font-weight: 700 !important;
 }
 
 h1 {
@@ -36,6 +36,14 @@ a {
 
 pre {
 	font-family: 'Source Code Pro', Consolas, monospace;
+}
+
+.btn-link {
+	color: #000000;
+}
+
+.btn-link:hover {
+	color: #8E6F3E;
 }
 
 /*== Navbar ==*/
