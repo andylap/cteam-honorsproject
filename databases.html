@@ -47,13 +47,11 @@
     <div class="container" id="overview">
         <a href="#overview"><h2>Overview</h2></a>
         <p>SQL was created in the 1970s by researchers at IBM, and this language has persisted since then. Edgar Frank Todd wrote a paper, "A Relational Model of Data for Large Shared Data Banks," in 1970, and this serves as the foundation for modern analytics of big data. SQL is still the prominent language for querying structured databases, and other languages used to query tabular databases often explain their functionality in terms of SQL syntax. These tabular databases are arranged in tables, and they are called Relational Database Management Systems (RDBMS). The most basic feature of these systems is that the data are arrenged in tables with rows and columns. Each table has keys, and these keys are used to define the <em>relations</em> between tables.</p>
-        <br />
         <p>NoSQL or non-tabular databases have grown increasingly popular in recent years. The key feature to distinguish these databases from their structured counterparts is the lack of tables to format the data. This data is called <em>unstructured</em> or <em>semi-structured</em>, but this page will focus primarily on semi-structured databses, and it is common to see unstructured and semi-structured data both referred to as unstructured. Instead of defining tables with strict schema, non-tabular databases have loose restrictions for what their data can contain. Where a tabular database would have a primary table reference by other tables, a NoSQL databases would have objects that contain other objects.</p>
-        <br />
         <p>Before we continue, it is going to be helpful to define some of the vocabulary used on this page.</p>
     </div>
 
-    <div class="container" id="vocabulary">
+    <div class="container mb-5" id="vocabulary">
         <a href="#vocabulary"><h2>Vocabulary</h2></a>
         <div id="accordion">
             <div class="card">
@@ -66,9 +64,9 @@
                 </div>
                 <div id="collapseOne" class="collapse" aria-labelledby="SQL_NoSQL" data-parent="#accordion">
                     <div class="card-body">
-                        <pre>SQL</pre>
+                        <h5>SQL</h5>
                         <p>SQL stands for Structured Query Language, and this language manipulates data that is structured in tables. An SQL database is a database that can be maintained and used via the SQL language, and this corresponds to tabular and structured databses as well as a data warehouse.</p>
-                        <pre>NoSQL</pre>
+                        <h5>NoSQL</h5>
                         <p>NoSQL denotes a database that is not compatible with SQL, and this corresponds to non-tabular and unstructured databases as well as a data lake. These databases often require data scientists or software developers to write code to interpret the data, but some common tools to use this style are linq queries and MongoDB among others.</p>
                     </div>
                 </div>
@@ -81,11 +79,11 @@
                         </button>
                     </h5>
                 </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="Tabular_Non-tabular" data-parent="#accordion">
+                <div id="collapseTwo" class="collapse" aria-labelledby="Tabular_non-tabular" data-parent="#accordion">
                     <div class="card-body">
-                        <pre>Tabular</pre>
+                        <h5>Tabular</h5>
                         <p>A tabular database is one that is arranged in tables. It has columns determined by predefined schema and rows that follow these schema. Each row is a specific instance of the schema, and they are often referred to as records, events, or objects. Tabular databses are compatible with SQL, and they can be contained in something like a csv file.</p>
-                        <pre>Non-tabular</pre>
+                        <h5>Non-tabular</h5>
                         <p>A non-tabular database does not have predefined schema. Instead of being arranged in a table, a non-tabular database typically uses a tier system to organize data. This tier system is typically implemented in something like JSON, XML, BSON, or YAML documents. A databse of non-tiered data liks pdf documents or blogs would also fall under this umbrella.</p>
                     </div>
                 </div>
@@ -100,11 +98,11 @@
                 </div>
                 <div id="collapseThree" class="collapse" aria-labelledby="Structured_Unstructured" data-parent="#accordion">
                     <div class="card-body">
-                        <pre>Structured</pre>
+                        <h5>Structured</h5>
                         <p>The term structured database can be used interchangeably with SQL or tabular database. A structured database is a series of instances that all follow the same structure, and can therefore be formatted in a table</p>
-                        <pre>Semi-structured</pre>
+                        <h5>Semi-structured</h5>
                         <p>The term semi-structured refers to data that cannot easily be formatted in a table but does have some structure. This data is typically formatted in a JSON, XML, BSON, or YAML file. For the purposes of this page, Semi-structured and unstructured data will both be referred to as unstructured data. It is common to focus only on the differences between sturcutred database and everythign else that is not a structured database because both semi-structured and unstructured databases require some degree of interpretation that goes beyond simply working with tables.</p>
-                        <pre>Unstructured</pre>
+                        <h5>Unstructured</h5>
                         <p>The term unstructured refers to data that does not follow a template at all. This data would be contained in pdf documents, websited, social media posts, or anyhthing where applying a simple routine for interpretation would be a challenge. This page will not cover how to use this type of data much at all because it either has to be interpreted qualitatively or with more advanced data science algortihms related to natural langugae processing among others.</p>
                     </div>
                 </div>
@@ -119,14 +117,15 @@
                 </div>
                 <div id="collapseFour" class="collapse" aria-labelledby="Warehouse_Lake" data-parent="#accordion">
                     <div class="card-body">
-                        <pre>Data Warehouse</pre>
+                        <h5>Data Warehouse</h5>
                         <p>A data warehosue refers to a large database of tables. The data in a warehouse is structured, and this makes it earier for business professionals, engineers, or anyone who does not have extensive experience with data science or computer programming to analyze the data inside</p>
-                        <pre>Data Lake</pre>
+                        <h5>Data Lake</h5>
                         <p>A data lake contains unstructured data, and the data inside require some level of expertize to convert into a format that can be analyzed at scale. Often times, the purpose of this data is not yet known, or it is used for machince learning or some other task that does not require data to be easily transformed into tables and charts.</p>
                     </div>
                 </div>
             </div>
-        </div>
+		</div>
+	</div>
 
     <!-- Footer -->
     <footer>
