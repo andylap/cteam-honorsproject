@@ -46,6 +46,8 @@ pre, code {
 	background-color: #DDB945 !important;
 	color: #000000 !important;
 	border-color: #8E6F3E !important;
+	text-transform: uppercase;
+	font-weight: 600;
 }
 
 .btn-primary:hover {
