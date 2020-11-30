@@ -71,6 +71,10 @@ pre, code {
 	text-transform: uppercase;
 }
 
+@media (max-width: 576px) {
+	.navbar-brand {font-family: 'acumin-pro-condensed', 'Franklin Gothic Condensed', sans-serif;}
+}
+
 .nav-link {
 	color: #6F727B !important;
 }
