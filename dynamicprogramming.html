@@ -52,29 +52,29 @@
 	</div>
 
 	<div class="container" id="BigO">
-		<h3>Big O Notation</h3>
+		<a href="#BigO"><h3>Big O Notation</h3></a>
 		<p>Big O Notation is about finding an asymptotic upper bound for an algorithm. It is an abstract expression that measures how fast the runtime/memory usage grows, 
 		relative to the input size (often denoted <i>n</i>), and is taken as the input gets arbitrarily large (dropping the constants). For example, if an algorithm iterates 
 		through an array once, the time complexity would be <i>O(n)</i>; if it iterates through the array n times, such as a selection sort, the time complexity would be 
 		<i>O(n<sup>2</sup>)</i>; in the case of merge sort, where for every operation the array size that the algorithm deals with is halved, the time complexsity if 
 		<i>O(nlog(n))</i>. The following images show the comparison between different big O notations and the big O time complexities of common sorting algorithms. 
 		<div><img class="figure-img img-fluid mx-auto d-block" src="git_images/bigOnotation.png" width="350" height="300" alt="">
-		<figcaption class="figure-caption text-center">Big O Notation <a ref="https://medium.com/dataseries/how-to-calculate-time-complexity-with-big-o-notation-9afe33aa4c46">(image source)</a></figcaption>
+		<figcaption class="figure-caption text-center">Big O Notation <a href="https://medium.com/dataseries/how-to-calculate-time-complexity-with-big-o-notation-9afe33aa4c46">(image source)</a></figcaption>
 		</div>
 		<bl>
 		<div><img class="figure-img img-fluid mx-auto d-block" src="git_images/sortingBigO.png" width="400" height="340" alt="">
-		<figcaption class="figure-caption text-center">Sorting Algorithm Time Complexities <a ref="https://www.pinterest.com/pin/410812797235435303/">(image source)</a></figcaption>
+		<figcaption class="figure-caption text-center">Sorting Algorithm Time Complexities <a href="https://www.pinterest.com/pin/410812797235435303/">(image source)</a></figcaption>
 		</div>
 		</p>
 	</div>
 	<bl>
 	<div class="container mb-5" id="DP">
-		<h3>Dynamic Programming</h3>
+		<a href="#DP"><h3>Dynamic Programming</h3></a>
 		<p>
 			The 2 keys to dynamic programming is to break the problem down into smaller sub-problems and avoid repeating doing the same calculation. Let's look at this example: 
 			(code are written in Python for best readability):
 		<div id="Fib">
-			<h3>Fibonacci numbers</h3>
+			<a href="#Fib"><h3>Fibonacci numbers</h3></a>
 			<p>Suppose now we have a problem where we are giving an integer n and are asked to return the nth Fibonacci number.
 			By definition, we know that <code> Fib(n) = Fib(n-1) + Fib(n-2)</code>, therefore we can pretty quickly come to the following solution:
 			<h4>Approach 1</h4>
@@ -129,7 +129,7 @@
 			done by only using the 2 previous numbers. This approach will visit all values at least once and the overall time to do this 
 			is proportional to n, hence O(n) time complexity. Because the memory usage for this approach is constant, 
 			the time complexity is improved to O(1). </p>
-			<p>The Fibonacci problem can also be solved mathematically using <a ref="http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibFormula.html">Binet's formula</a></p>
+			<p>The Fibonacci problem can also be solved mathematically using <a href="http://www.maths.surrey.ac.uk/hosted-sites/R.Knott/Fibonacci/fibFormula.html">Binet's formula</a></p>
 			</div>
 		<p>Dynamic Programming and complexity analysis are high level coding skills that can help you lots during coding interviews, therefore 
 		it is important to practice these kinds of questions.  </p>
