@@ -60,6 +60,15 @@ pre, code {
 	color: #8E6F3E;
 }
 
+blockquote {
+	padding-left: 2%;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-left: 3%;
+	border-left-style: solid;
+	border-color: #CFB991;
+}
+
 /*== Navbar ==*/
 .navbar {
 	box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
