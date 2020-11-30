@@ -47,22 +47,18 @@
     <div class="container" id="overview">
         <a href="#overview"><h2>Overview</h2></a>
         <p>SQL was created in the 1970s by researchers at IBM, and this language has persisted since then. Edgar Frank Todd wrote a paper, "A Relational Model of Data for Large Shared Data Banks," in 1970, and this serves as the foundation for modern analytics of big data. SQL is still the prominent language for querying structured databases, and other languages used to query tabular databases often explain their functionality in terms of SQL syntax. These tabular databases are arranged in tables, and they are called Relational Database Management Systems (RDBMS). The most basic feature of these systems is that the data are arrenged in tables with rows and columns. Each table has keys, and these keys are used to define the <em>relations</em> between tables.</p>
-<<<<<<< HEAD
         <figure class="figure"></figure>
-        <img class="figure-img img-fluid mx-auto d-block" width="350" height="200" src="git_images/table_relations.png" alt="">
-        <figcaption class="figure-caption text-center">
-            Example of defining relations between databses with UML
-            <a href="http://etutorials.org/SQL/Database+design+for+mere+mortals/Part+II+The+Design+Process/Chapter+10.+Table+Relationships/Refining+All+Foreign+Keys/">Image Source </a>
-        </figcaption>
+			<img class="figure-img img-fluid mx-auto d-block" width="350" height="200" src="git_images/table_relations.png" alt="">
+			<figcaption class="figure-caption text-center">
+				Example of defining relations between databses with UML
+				<a href="http://etutorials.org/SQL/Database+design+for+mere+mortals/Part+II+The+Design+Process/Chapter+10.+Table+Relationships/Refining+All+Foreign+Keys/">Image Source </a>
+			</figcaption>
         </figure>
-        <br />
-=======
->>>>>>> fb83fe6cfc855fb7cd9a84916c5e102800ffe32a
         <p>NoSQL or non-tabular databases have grown increasingly popular in recent years. The key feature to distinguish these databases from their structured counterparts is the lack of tables to format the data. This data is called <em>unstructured</em> or <em>semi-structured</em>, but this page will focus primarily on semi-structured databses, and it is common to see unstructured and semi-structured data both referred to as unstructured. Instead of defining tables with strict schema, non-tabular databases have loose restrictions for what their data can contain. Where a tabular database would have a primary table reference by other tables, a NoSQL databases would have objects that contain other objects.</p>
         <p>Before we continue, it is going to be helpful to define some of the vocabulary used on this page.</p>
     </div>
 
-    <div class="container mb-5" id="vocabulary">
+    <div class="container" id="vocabulary">
         <a href="#vocabulary"><h2>Vocabulary</h2></a>
         <div id="accordion">
             <div class="card">
@@ -138,44 +134,44 @@
 		</div>
 	</div>
 
-        <div class="container" id="Advantages">
-            <a href="#advantages"><h2>Advantages</h2></a>
-            <h4>Tabular</h4>
-            <p>
-                Tabular databases are typically used when data is atomic (cannot be broken in to smaller units), consistent (each record follows the same schema), isolated (each event or object is independent of the others), and durable (it is important that the data is not lost even in the case of a power outage). This refers to ACID compliance. Tabular databases are commonly used in applications such as CRMs, ERPs, and student records. Checkout the key benefits of using a tabular database:
-                <ul>
-                    <li><strong>Optimized for querying data:</strong> SQL is a mature programming language, and many of its similar alternatives have also been carefully optimized. Tabular data is great when <em>retrieving</em> must be done quickly</li>
-                    <li><strong>Easy to interperet:</strong> Most people have been taught to analyze 2D data in a table since middle school science and math classes. Most professionals can learn how to use this type of database without much instruction</li>
-                    <li><strong>Reliable:</strong> Strict typing makes insertion difficult, and this ensures users that they know exaclty what it is in their database, and these databases are perfect where every record is significant due to their robustness. Moreover, tabular databses have the advantage of being a mature technology with an abundance of reseources to help users.</li>
-                </ul>
-            </p>
-            <br />
-            <p></p>
-            <br />
-            <p>Before we continue, it is going to be helpful to define some of the vocabulary used on this page.</p>
-        </div>
+	<div class="container" id="Advantages">
+		<a href="#advantages"><h2>Advantages</h2></a>
+		<h4>Tabular</h4>
+		<p>
+			Tabular databases are typically used when data is atomic (cannot be broken in to smaller units), consistent (each record follows the same schema), isolated (each event or object is independent of the others), and durable (it is important that the data is not lost even in the case of a power outage). This refers to ACID compliance. Tabular databases are commonly used in applications such as CRMs, ERPs, and student records. Checkout the key benefits of using a tabular database:
+			<ul>
+				<li><strong>Optimized for querying data:</strong> SQL is a mature programming language, and many of its similar alternatives have also been carefully optimized. Tabular data is great when <em>retrieving</em> must be done quickly</li>
+				<li><strong>Easy to interperet:</strong> Most people have been taught to analyze 2D data in a table since middle school science and math classes. Most professionals can learn how to use this type of database without much instruction</li>
+				<li><strong>Reliable:</strong> Strict typing makes insertion difficult, and this ensures users that they know exaclty what it is in their database, and these databases are perfect where every record is significant due to their robustness. Moreover, tabular databses have the advantage of being a mature technology with an abundance of reseources to help users.</li>
+			</ul>
+		</p>
+		<br />
+		<p></p>
+		<br />
+		<p>Before we continue, it is going to be helpful to define some of the vocabulary used on this page.</p>
+	</div>
 
-        <!-- Footer -->
-        <footer>
-            <div class="container">
-                <div class="row text-light text-center py-4 justify-content-center">
-                    <div class="col-sm-10 col-md-8 col-lg-6">
-                        <a href="index.html" style="font-weight: 700; font-size: 1.5rem; text-transform: uppercase;">ECE 39595 Knowledgebase</a>
-                        <p>Honors Project for <a href="https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=579&show=true&type=undergrad">ECE 39595</a> (Object-Oriented Programming using C++ and Java) at <a href="https://purdue.edu">Purdue University</a> for Fall 2020.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row text-light text-center py-4 justify-content-center">
+				<div class="col-sm-10 col-md-8 col-lg-6">
+					<a href="index.html" style="font-weight: 700; font-size: 1.5rem; text-transform: uppercase;">ECE 39595 Knowledgebase</a>
+					<p>Honors Project for <a href="https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=579&show=true&type=undergrad">ECE 39595</a> (Object-Oriented Programming using C++ and Java) at <a href="https://purdue.edu">Purdue University</a> for Fall 2020.</p>
+				</div>
+			</div>
+		</div>
+	</footer>
 
-        <!-- Script Source Files -->
-        <!-- jQuery -->
-        <script src="js/jquery-3.5.1.min.js"></script>
-        <!-- Bootstrap 4.5 JS -->
-        <script src="js/bootstrap.min.js"></script>
-        <!-- Popper JS -->
-        <script src="js/popper.min.js"></script>
-        <!-- Font Awesome -->
-        <script src="js/all.min.js"></script>
+	<!-- Script Source Files -->
+	<!-- jQuery -->
+	<script src="js/jquery-3.5.1.min.js"></script>
+	<!-- Bootstrap 4.5 JS -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Popper JS -->
+	<script src="js/popper.min.js"></script>
+	<!-- Font Awesome -->
+	<script src="js/all.min.js"></script>
 
-        <!-- End Script Source Files -->
+	<!-- End Script Source Files -->
 </body>
