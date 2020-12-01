@@ -1,6 +1,8 @@
 # C Team Honors Project
 Honors Project for ECE 39595 (Object-Oriented Programming using C++ and Java) at Purdue University for Fall 2020.
 
+**Website is live on [https://andylap.github.io/cteam-honorsproject/](https://andylap.github.io/cteam-honorsproject/).**
+
 ## Overview
 The “C Team” will build a website demonstrating various computer engineering projects. The team will collaborate on thewebsite as a whole, but each member will have an individual page to build. These pages will provide an introduction forbeginners on each topic. Each team member will list his/her contribution below.
 
