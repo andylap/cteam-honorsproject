@@ -1,19 +1,21 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Databases | ECE 39595 Knowledgebase</title>
-	<link rel="shortcut icon" href="img/favicon.ico">
-	<!-- Bootstrap 4.5 CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- Style CSS -->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- Purdue Fonts -->
-	<link href="https://www.purdue.edu/purdue/fonts/united-sans/united-sans.css" rel="stylesheet" />
-	<link href="https://use.typekit.net/ghc8hdz.css" rel="stylesheet" />
+    <title>Databases | ECE 39595 Knowledgebase</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Bootstrap 4.5 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Purdue Fonts -->
+    <link href="https://www.purdue.edu/purdue/fonts/united-sans/united-sans.css" rel="stylesheet" />
+    <link href="https://use.typekit.net/ghc8hdz.css" rel="stylesheet" />
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar fixed-top bg-light navbar-light">
@@ -45,28 +47,50 @@
     </div>
 
     <div class="container" id="overview">
-        <a href="#overview"><h2>Overview</h2></a>
-        <p>SQL was created in the 1970s by researchers at IBM, and this language has persisted since then. Edgar Frank Todd wrote a paper, "A Relational Model of Data for Large Shared Data Banks," in 1970, and this serves as the foundation for modern analytics of big data. SQL is still the prominent language for querying structured databases, and other languages used to query tabular databases often explain their functionality in terms of SQL syntax. These tabular databases are arranged in tables, and they are called Relational Database Management Systems (RDBMS). The most basic feature of these systems is that the data are arrenged in tables with rows and columns. Each table has keys, and these keys are used to define the <em>relations</em> between tables.</p>
+        <a href="#overview">
+            <h2>Overview</h2>
+        </a>
+        <p>Structured Query Language (SQL) was created in the 1970s by researchers at IBM, and this language has
+            persisted since then. Edgar Frank
+            Todd wrote a paper, "A Relational Model of Data for Large Shared Data Banks," in 1970, and this serves as
+            the foundation for modern analytics of big data. SQL is still the prominent language for querying structured
+            databases, and other languages used to query tabular databases often explain their functionality in terms of
+            SQL syntax. Tabular databases are arranged in tables, and they are called Relational Database
+            Management Systems (RDBMS). The most basic feature of these systems is that the data are arranged in tables
+            with rows and columns. Each table has keys, and these keys are used to define the <em>relations</em> between
+            tables.</p>
         <figure class="figure"></figure>
-			<img class="figure-img img-fluid mx-auto d-block" width="350" height="200" src="git_images/table_relations.png" alt="">
-			<figcaption class="figure-caption text-center">
-				Example of defining relations between databses with UML
-				<a href="http://etutorials.org/SQL/Database+design+for+mere+mortals/Part+II+The+Design+Process/Chapter+10.+Table+Relationships/Refining+All+Foreign+Keys/">Image Source </a>
-			</figcaption>
+        <img class="figure-img img-fluid mx-auto d-block" width="350" height="200" src="git_images/table_relations.png"
+            alt="">
+        <figcaption class="figure-caption text-center">
+            Example of defining relations between databases with UML
+            <a
+                href="http://etutorials.org/SQL/Database+design+for+mere+mortals/Part+II+The+Design+Process/Chapter+10.+Table+Relationships/Refining+All+Foreign+Keys/">Image
+                Source </a>
+        </figcaption>
         </figure>
         <br />
-        <p>NoSQL or non-tabular databases have grown increasingly popular in recent years. The key feature to distinguish these databases from their structured counterparts is the lack of tables to format the data. This data is called <em>unstructured</em> or <em>semi-structured</em>, but this page will focus primarily on semi-structured databses, and it is common to see unstructured and semi-structured data both referred to as unstructured. Instead of defining tables with strict schema, non-tabular databases have loose restrictions for what their data can contain. Where a tabular database would have a primary table reference by other tables, a NoSQL databases would have objects that contain other objects.</p>
+        <p>NoSQL or non-tabular databases have grown increasingly popular in recent years. The key feature to
+            distinguish these databases from their structured counterparts is the lack of tables to format the data.
+            This data is called <em>unstructured</em> or <em>semi-structured</em>, but this page will focus primarily on
+            semi-structured databases. It's common to see unstructured and semi-structured data both referred to as
+            unstructured. Instead of defining tables with strict schema, non-tabular databases have loose restrictions
+            for what their data can contain. Where a tabular database would have a primary table reference by other
+            tables, a NoSQL databases would have objects that contain other objects.</p>
         <br />
         <p>Before we continue, it is going to be helpful to define some of the vocabulary used on this page.</p>
     </div>
 
     <div class="container mb-3" id="vocabulary">
-        <a href="#vocabulary"><h2>Vocabulary</h2></a>
+        <a href="#vocabulary">
+            <h2>Vocabulary</h2>
+        </a>
         <div id="accordion">
             <div class="card">
                 <div class="card-header" id="SQL_NoSQL">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
                             <h4>SQL vs. NoSQL</h4>
                         </button>
                     </h5>
@@ -74,16 +98,23 @@
                 <div id="collapseOne" class="collapse" aria-labelledby="SQL_NoSQL" data-parent="#accordion">
                     <div class="card-body">
                         <pre>SQL</pre>
-                        <p>SQL stands for Structured Query Language, and this language manipulates data that is structured in tables. An SQL database is a database that can be maintained and used via the SQL language, and this corresponds to tabular and structured databses as well as a data warehouse.</p>
+                        <p>SQL stands for Structured Query Language, and this language manipulates data that is
+                            structured in tables. An SQL database can be maintained and used via the
+                            SQL language, and this corresponds to tabular and structured databases as well as a data
+                            warehouse.</p>
                         <pre>NoSQL</pre>
-                        <p>NoSQL denotes a database that is not compatible with SQL, and this corresponds to non-tabular and unstructured databases as well as a data lake. These databases often require data scientists or software developers to write code to interpret the data, but some common tools to use this style are linq queries and MongoDB among others.</p>
+                        <p>NoSQL denotes a database that is not compatible with SQL, and this corresponds to non-tabular
+                            and unstructured databases as well as a data lake. These databases often require data
+                            scientists or software developers to write code to interpret the data, but some common tools
+                            to use this style include linq queries and MongoDB among others.</p>
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header" id="tabular_non-tabular">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+                            aria-expanded="true" aria-controls="collapseTwo">
                             <h4>Tabular vs. Non-tabular</h4>
                         </button>
                     </h5>
@@ -91,35 +122,58 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="Tabular_Non-tabular" data-parent="#accordion">
                     <div class="card-body">
                         <pre>Tabular</pre>
-                        <p>A tabular database is one that is arranged in tables. It has columns determined by predefined schema and rows that follow these schema. Each row is a specific instance of the schema, and they are often referred to as records, events, or objects. Tabular databses are compatible with SQL, and they can be contained in something like a csv file.</p>
+                        <p>A tabular database is arranged in tables. It has columns determined by predefined
+                            schema and rows that follow these schema. Each row is a specific instance of the schema, and
+                            they are often referred to as records, events, or objects. Tabular databases are compatible
+                            with SQL, and they can be contained in something like a csv file.</p>
                         <pre>Non-tabular</pre>
-                        <p>A non-tabular database does not have predefined schema. Instead of being arranged in a table, a non-tabular database typically uses a tier system to organize data. This tier system is typically implemented in something like JSON, XML, BSON, or YAML documents. A databse of non-tiered data liks pdf documents or blogs would also fall under this umbrella.</p>
+                        <p>A non-tabular database does not have predefined schema. Instead of being arranged in a table,
+                            a non-tabular database typically uses a tier system to organize data. This tier system is
+                            typically implemented in something like JSON, XML, BSON, or YAML documents. A database of
+                            non-tiered data such as PDF documents or blogs also falls under this umbrella.</p>
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header" id="Structured_Unstructured">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree"
+                            aria-expanded="true" aria-controls="collapseThree">
                             <h4>Structured vs. Semi-structured vs. Unstructured</h4>
                         </button>
                     </h5>
                 </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="Structured_Unstructured" data-parent="#accordion">
+                <div id="collapseThree" class="collapse" aria-labelledby="Structured_Unstructured"
+                    data-parent="#accordion">
                     <div class="card-body">
                         <pre>Structured</pre>
-                        <p>The term structured database can be used interchangeably with SQL or tabular database. A structured database is a series of instances that all follow the same structure, and can therefore be formatted in a table</p>
+                        <p>The term structured database can be used interchangeably with SQL or tabular database. A
+                            structured database is a series of instances that all follow the same structure, and can
+                            therefore be formatted in a table</p>
                         <pre>Semi-structured</pre>
-                        <p>The term semi-structured refers to data that cannot easily be formatted in a table but does have some structure, and a semi-structured database uses tags and elements to format its data. This data is typically formatted in a JSON, XML, BSON, or YAML file. For the purposes of this page, Semi-structured and unstructured data will both be referred to as unstructured data. It is common to focus only on the differences between sturcutred database and everythign else that is not a structured database because both semi-structured and unstructured databases require some degree of interpretation that goes beyond simply working with tables.</p>
+                        <p>The term semi-structured refers to data that cannot easily be formatted in a table but does
+                            have some structure. A semi-structured database uses tags and elements to format its
+                            data. This data is typically formatted in a JSON, XML, BSON, or YAML file. For the purposes
+                            of this page, semi-structured and unstructured data will both be referred to as unstructured
+                            data. It is common to focus only on the differences between structured databases and
+                            everything else because both semi-structured and
+                            unstructured databases require some degree of interpretation that goes beyond simply working
+                            with tables.</p>
                         <pre>Unstructured</pre>
-                        <p>The term unstructured refers to data that does not follow a template at all. This data would be contained in pdf documents, websited, social media posts, or anyhthing where applying a simple routine for interpretation would be a challenge. This page will not cover how to use this type of data much at all because it either has to be interpreted qualitatively or with more advanced data science algortihms related to natural langugae processing among others.</p>
+                        <p>The term unstructured refers to data that does not follow a template at all. This data would
+                            be contained in PDF documents, websites, social media posts, or anything where applying a
+                            simple routine for interpretation would be a challenge. This page will not cover how to use
+                            this type of data much at all because it has to be interpreted qualitatively or with
+                            more advanced data science algorithms like natural language processing.
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header" id="Warehouse_Lake">
                     <h5 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour"
+                            aria-expanded="true" aria-controls="collapseFour">
                             <h4>Data Warehouse vs. Data Lake</h4>
                         </button>
                     </h5>
@@ -127,67 +181,137 @@
                 <div id="collapseFour" class="collapse" aria-labelledby="Warehouse_Lake" data-parent="#accordion">
                     <div class="card-body">
                         <pre>Data Warehouse</pre>
-                        <p>A data warehosue refers to a large database of tables. The data in a warehouse is structured, and this makes it earier for business professionals, engineers, or anyone who does not have extensive experience with data science or computer programming to analyze the data inside</p>
+                        <p>A data warehouse refers to a large database of tables. The data in a warehouse is structured
+                            which
+                            makes it easier for business professionals, engineers, or anyone who does not have
+                            extensive experience with data science or computer programming to analyze the data inside.
+                        </p>
                         <pre>Data Lake</pre>
-                        <p>A data lake contains unstructured data, and the data inside require some level of expertize to convert into a format that can be analyzed at scale. Often times, the purpose of this data is not yet known, or it is used for machince learning or some other task that does not require data to be easily transformed into tables and charts.</p>
+                        <p>A data lake contains unstructured data, and the data inside requires some level of expertise
+                            to convert into a format that can be analyzed at scale. Often times, the purpose of this
+                            data is not yet known. It can be used for machine learning or some other task that does not
+                            require data to be easily transformed into tables and charts.</p>
                     </div>
                 </div>
             </div>
-		</div>
+        </div>
     </div>
 
-	<div class="container" id="Advantages">
-		<a href="#advantages"><h2>Advantages</h2></a>
-		<h4>Tabular</h4>
-		<p>Tabular databases are typically used when data is atomic (cannot be broken in to smaller units), consistent (each record follows the same schema), isolated (each event or object is independent of the others), and durable (it is important that the data is not lost even in the case of a power outage). This refers to ACID compliance. Tabular databases are commonly used in applications such as CRMs, ERPs, and student records. Checkout the key benefits of using a tabular database:</p>
-		<ul>
-			<li><strong>Optimized for querying data:</strong> SQL is a mature programming language, and many of its similar alternatives have also been carefully optimized. Tabular data is great when <em>retrieving</em> must be done quickly</li>
-			<li><strong>Easy to interperet:</strong> Most people have been taught to analyze 2D data in a table since middle school science and math classes. Most professionals can learn how to use this type of database without much instruction</li>
-			<li><strong>Reliable:</strong> Strict typing makes insertion difficult, and this ensures users that they know exaclty what it is in their database, and these databases are perfect where every record is significant due to their robustness. Moreover, tabular databses have the advantage of being a mature technology with an abundance of reseources to help users.</li>
-		</ul>
-		<h4>Non-tabular</h4>
-		<p>Non-tabular databses are typically used when data is basically available (the database is generally usable but may go down), soft state (data may change over time), and eventaully consistent (system will eventaully become consistent over time), and this refers to BASE compliance. Non-tabular databases are used for data like article content, social media posts, and sensor data. Checkout the key benefits of using a non-tabular database:</p>
-		<ul>
-			<li><strong>Scalable:</strong> non-tabular databases scale <em>horizontally</em> whereas tabular databases scale <em>vertically</em>. This allows non-tabular databases to be spread across multiple servers.</li>
-			<li><strong>Quick to setup:</strong> One major advantage for non-tabular databases is that raw data without predefined schema can be inserted. Eliminating the time to plan out schema helps make non-tabular databases quick to setup before the specific needs of the data have been determined</li>
-			<li><strong>Flexible:</strong> Since there are no specific schema that the data must fit to, non-tabular databases allow for the needs and purpose of a database to change with little overhead. Non-tabular data pairs often pairs well with agile development in the early stages of the project- check ou our section on agile/scrum methodologies to learn more!</li>
-		</ul>
-	</div>
+    <div class="container" id="Advantages">
+        <a href="#advantages">
+            <h2>Advantages</h2>
+        </a>
+        <h4>Tabular</h4>
+        <p>Tabular databases are typically used when data is atomic (cannot be broken in to smaller units), consistent
+            (each record follows the same schema), isolated (each event or object is independent of the others), and
+            durable (it is important that the data is not lost even in the case of a power outage). This is referred to
+            as ACID
+            compliance. Tabular databases are commonly used in applications such as CRMs, ERPs, and student records.
+            Check out the key benefits of using a tabular database:</p>
+        <ul>
+            <li><strong>Optimized for querying data:</strong> SQL is a mature programming language, and many of its
+                similar alternatives have also been carefully optimized. Tabular data is great when <em>retrieving</em>
+                must be done quickly</li>
+            <li><strong>Easy to interpret:</strong> Most people have been taught to analyze 2D data in a table since
+                middle school science and math classes. Professionals can often learn how to use this type of database
+                without much instruction</li>
+            <li><strong>Reliable:</strong> Strict typing makes insertion difficult, and this ensures that users
+                know exactly what it is in their database. These databases are perfect where every record is
+                significant due to their robustness. Moreover, tabular databases have the advantage of being a mature
+                technology with an abundance of resources to help users.</li>
+        </ul>
+        <h4>Non-tabular</h4>
+        <p>Non-tabular databases are typically used when data is basically available (the database is generally usable
+            but may go down), soft state (data may change over time), and eventually consistent (the system will
+            eventually
+            become consistent over time) This refers to BASE compliance. Non-tabular databases are used for data
+            like article content, social media posts, and sensor data. Check out the key benefits of using a non-tabular
+            database:</p>
+        <ul>
+            <li><strong>Scalable:</strong> Non-tabular databases scale <em>horizontally</em> whereas tabular databases
+                scale <em>vertically</em>. This allows non-tabular databases to be spread across multiple servers.</li>
+            <li><strong>Quick to setup:</strong> One major advantage for non-tabular databases is that raw data without
+                predefined schema can be inserted. Eliminating the time to plan out schema helps make non-tabular
+                databases quick to setup before the specific needs of the data have been determined</li>
+            <li><strong>Flexible:</strong> Since there are no specific schema that the data must fit to, non-tabular
+                databases allow for the needs and purpose of a database to change with little overhead. Non-tabular data
+                often pairs well with agile development in the early stages of the project- check out our section
+                on <a href="agilescrum.html">agile/scrum methodologies</a> to learn more!</li>
+        </ul>
+    </div>
 
-	<div class="container mb-5" id="oop">
-		<a href="#oop"><h2>Connection to Object-Oriented Programming</h2></a>
-		<h4>Tabular</h4>
-		<p>The most clear connect between tabular databases and object-oriented programming lies in the definition of schema. The schema used to define a table are analogous to the attributes of a class, and an even clearer connection can be drawn between a struct. A struct is similar to a class except it does not have any methods. A <em>structured</em> database is essentially a collection of <em>struct</em> instances.</p>
-		<p>Another parallel can be drawn between relations between table keys and HASA relationships. For example, a program that keeps track of two classes, teachers and students, could have a HASA relationship between students an their teachers where each student has a teacher attribute. A similar relationship could easily be maintained between tables of many teachers and many students. The student schema would simply have a teacherId as one of its fields, and keeping this key inside the table would maintain ACID compliant.</p>
-		<p>Providing the opportunity to maintain an ISA relationship is slightly more complicated because each table must have predefined schema. If the student and teacher classes both inherit from a Person class, the student and teacher would both share the Person qualities. If we kept separate tables for students and teachers, the ISA relationship with Person would be lost in our schema. One solution that appears in ERPs is to use a a common table but allow only pertinent columns to appear with a given query. For example, there could be a person table with 15 columns: the first five correspond to Person attributes, the next five correspond to Teacher attributes, and the last five correpsond to Student attributes. Then, a query for the Person schema can only see the first five, a query for the Teacher schema can only see teh first ten, and a query for the Student schema can only see the first or last five. This solution is complicated, however, and results in space inefficiencies.</p>
-		<p>Connecting classes to schema emphasizes that it is important to favor a HASA relationship over an ISA relationship. In the Person, Student, Teacher program, the Student schema and the Teacher schema can both encapsulate the Person Schema. Then, each schema can once again have its own table, but the Student and Person tables will reference their corresponding record in the Person schema only when and if that data is necessary. Even though the ISA relationship is more intuitive, it is much more efficient to keep a HASA relationship.</p>
-		<h4>Non-tabular</h4>
-		<p>The tag-element relationship present in semi-structured data is the most clear connection between non-tabular data and object-oriented programming. For the project for ECE 39595, the input was an XML document that the program parsed. The parser used the tages to understand the type of objects that it was reading in and what attributes were associated with those objects. While the XML document did not have any predefined schema, the program could interpret its data to map it to the classes that it had defined.</p>
-		<p>Since all data in a non-tabular database is self-contained, there are more options available for a HASA relationship. The same Teacher-Student example could be formatted in a JSON document where the Student still has an attribute marking a unique key for its teacher. Teachers could also contain arrays of students whereas that would not have been possible with tabular data.</p>
-		<p>ISA relationships are also easier with non-tabular data because of the flexibility that this style provides. The attributes of any object can vary, and that is not an issue because they are all contained in tag-element pairs. This means that a YAML document could have any number of Person objects, and each object that was a Teacher would have Teacher tags, and each Student object would have Student tags.</p>
-	</div>
+    <div class="container mb-5" id="oop">
+        <a href="#oop">
+            <h2>Connection to Object-Oriented Programming</h2>
+        </a>
+        <h4>Tabular</h4>
+        <p>The most clear connect between tabular databases and object-oriented programming lies in the definition of
+            schema. The schema used to define a table are analogous to the attributes of a class, and an even clearer
+            connection can be drawn with a struct. A struct is similar to a class except it does not have any
+            methods. A <em>structured</em> database is essentially a collection of <em>struct</em> instances.</p>
+        <p>Another parallel can be drawn between relations between table keys and HASA relationships. For example, a
+            program that keeps track of two classes, teachers and students, could have a HASA relationship between
+            students and their teachers where each Student has a Teacher attribute. A similar relationship could easily
+            be maintained between tables of many teachers and many students. The Student schema would simply have a
+            teacherId as one of its fields, and keeping this key inside the table would be ACID compliant.</p>
+        <p>Providing the opportunity to maintain an ISA relationship is slightly more complicated because each table
+            must have predefined schema. If the Student and Teacher classes both inherit from a Person class, the
+            Student and Teacher would both share the Person qualities. If we keep separate tables for students and
+            teachers, the ISA relationship with Person would be lost in our schema. One solution that appears in ERPs is
+            to use a a common table but allow only pertinent columns to appear with a given query. For example, there
+            could be a person table with 15 columns: the first five correspond to Person attributes, the next five
+            correspond to Teacher attributes, and the last five correspond to Student attributes. Then, a query for the
+            Person schema can only see the first five, a query for the Teacher schema can only see the first ten, and a
+            query for the Student schema can only see the first and last five. This solution is complicated, however,
+            and
+            results in space inefficiencies.</p>
+        <p>Connecting classes to schema emphasizes that it is important to favor a HASA relationship over an ISA
+            relationship. In the Person, Student, Teacher program, the Student schema and the Teacher schema can both
+            encapsulate the Person Schema. Then, each schema can once again have its own table, but the Student and
+            Person tables will reference their corresponding record in the Person schema only when and if that data is
+            necessary. Even though the ISA relationship is more intuitive, it is much more efficient to keep a HASA
+            relationship.</p>
+        <h4>Non-tabular</h4>
+        <p>The tag-element relationship present in semi-structured data is the most clear connection between non-tabular
+            data and object-oriented programming. For the project in ECE 39595, the input was an XML document that the
+            program parsed. The parser used the tags to understand the type of objects it was reading in and what
+            attributes were associated with those objects. While the XML document did not have any predefined schema,
+            the program could interpret its data to map it to the classes that it had defined.</p>
+        <p>Since all data in a non-tabular database is self-contained, there are more options available for a HASA
+            relationship. The same Teacher-Student example could be formatted in a JSON document where the Student still
+            has an attribute marking a unique key for its teacher. Teachers could also contain arrays of students
+            whereas that would not have been possible with tabular data.</p>
+        <p>ISA relationships are also easier with non-tabular data because of the flexibility that this style provides.
+            The attributes of any object can vary, and that is not an issue because they are all contained in
+            tag-element pairs. This means that a YAML document could have any number of Person objects, each object
+            that was a Teacher would have Teacher tags, and each Student object would have Student tags.</p>
+    </div>
 
-	<!-- Footer -->
-	<footer>
-		<div class="container">
-			<div class="row text-light text-center py-4 justify-content-center">
-				<div class="col-sm-10 col-md-8 col-lg-6">
-					<a href="index.html" style="font-weight: 700; font-size: 1.5rem; text-transform: uppercase;">ECE 39595 Knowledgebase</a>
-					<p>Honors Project for <a href="https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=579&show=true&type=undergrad">ECE 39595</a> (Object-Oriented Programming using C++ and Java) at <a href="https://purdue.edu">Purdue University</a> for Fall 2020.</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row text-light text-center py-4 justify-content-center">
+                <div class="col-sm-10 col-md-8 col-lg-6">
+                    <a href="index.html" style="font-weight: 700; font-size: 1.5rem; text-transform: uppercase;">ECE
+                        39595 Knowledgebase</a>
+                    <p>Honors Project for <a
+                            href="https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=579&show=true&type=undergrad">ECE
+                            39595</a> (Object-Oriented Programming using C++ and Java) at <a
+                            href="https://purdue.edu">Purdue University</a> for Fall 2020.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-	<!-- Script Source Files -->
-	<!-- jQuery -->
-	<script src="js/jquery-3.5.1.min.js"></script>
-	<!-- Bootstrap 4.5 JS -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Popper JS -->
-	<script src="js/popper.min.js"></script>
-	<!-- Font Awesome -->
-	<script src="js/all.min.js"></script>
+    <!-- Script Source Files -->
+    <!-- jQuery -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap 4.5 JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Popper JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="js/all.min.js"></script>
 
-	<!-- End Script Source Files -->
+    <!-- End Script Source Files -->
 </body>
