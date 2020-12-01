@@ -529,6 +529,690 @@
 		</p>
 	</div>
 
+	<div class="container" id="bash_commands">
+		<a href="#bash_commands">
+			<h2>Bash Commands</h2>
+		</a>
+		<p>
+            Whether you are working on an individual project or in a large team setting, knowing how to use the Bash terminal is useful
+             in a variety of settings. The commands you will be learning to work with will allow you to efficiently
+             navigate your local file system; manipulate, move, and display file contents and statistics; and interact with
+             file permissions management. <!--and remote access systems&mdash;for example, <em>scholar</em>.-->
+		</p>
+	</div>
+
+	<div class = "container" id = "commands">
+		<a href="#file_system_commands"><h2>File System Navigation</h2></a>
+        <p>There are several general functions which are incredibly useful in allowing you to navigate the file system. Some of the basics include:</p>
+		<div id="accordion">
+            <!-- RELATIVE VS. ABSOLUTE POSITION -->
+            <div class="card">
+                <div class="card-header" id="relative_absolute">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <h4 style="color:black">Relative vs. Absolute Position</h4>
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="relative_absolute" data-parent="#accordion">
+                  <div class="card-body">
+                    <p>When working in the local file system, many commands often rely on the locations of the files or directories
+                        being worked with as input arguments to the commands being used. This allows the commands being used to manipulate documents
+                        very precisely. To properly pass document locations to commands, there are two positioning systems that can be used: <em>Relative</em>,
+                        and <em>Absolute</em>.
+                    </p>
+                    <h3>Relative Position</h3>
+                    <p>Relative positioning is when locations are specified relative to the users current location in the file system.</p>
+                    <p>There are several symbols which are used to specify locations relative to the current position</p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Symbol</th>
+                                <th scope="col">Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-size:30px;">.</td>
+                                <td>Represents the current location in the file system. This is useful when specifying destinations.<br>
+                                    <i>Example: moving and copying documents.</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size:30px;">..</td>
+                                <td>This marks the parent directory from the current position in the file system.
+                                    To specify multiple directories back, the symbol can be strung together using <code style="color:black;">/</code>.<br>
+                                    <i>Example: <code style="color:black;">../../..</code></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-size:30px;">*</td>
+                                <td>The <i>asterisk</i> denotes all files in the current directory.
+                                    This may be useful when trying to move many files from one directory to another.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h3>Absolute Position</h3>
+                    <p>Absolute positioning is when locations are specified relative to the base directory in the file system.
+                        Using absolute position may be beneficial when working with two or more directories that are not closely
+                        positioned in the file system. Rather than using extensive relative movement, it may be easier to track which
+                        directories are being utilized with absolute position.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <!-- PWD -->
+			<div class="card">
+			  <div class="card-header" id="pwd">
+				<h5 class="mb-0">
+				  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+					<h4 style="color:black">pwd</h4>
+				  </button>
+				</h5>
+			  </div>
+			  <div id="collapseTwo" class="collapse" aria-labelledby="pwd" data-parent="#accordion">
+				<div class="card-body">
+				  <pre>$ pwd</pre>
+				  <p>Display the absolute position of your current location in the file system.</p><br>
+                  <i><h4>Example:</h4> <em>/mnt/c/Users/Name/Folder1/Folder2</em></i>
+				</div>
+			  </div>
+			</div>
+            <!-- LS -->
+			<div class="card">
+			  <div class="card-header" id="ls">
+				<h5 class="mb-0">
+					<button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseTwo">
+						<h4 style="color:black">ls</h4>
+					  </button>
+				</h5>
+			  </div>
+			  <div id="collapseThree" class="collapse" aria-labelledby="ls" data-parent="#accordion">
+				<div class="card-body">
+                    <pre>$ ls</pre>
+                    <pre>code/ HelloWorld.txt overview.txt</pre>
+					<p>List all of the folders and files in the current directory. Any item ending with <em>/</em> is a folder, and the other items are files.</p>
+                    <pre>$ ls -l</pre>
+                    <pre>total 0
+drwxrwxrwx 1 USER GROUP 4096 Nov 29 17:26 code/
+-rwxrwxrwx 1 USER GROUP   14 Nov 29 17:10 HelloWorld.txt
+-rwxrwxrwx 1 USER GROUP  516 Nov 29 17:09 overview.txt</pre>
+                    <p>The following is a breakdown of the output:</p>
+                    <ol>
+                        <li>Field 1 <em>(-/d)</em>: marks whether the item is a file (-) or directory (d)</li>
+                        <li>Field 2-4 <em>(rwx)</em>: marks the permissions that file owner has, followed by the group permissions,
+                             and ending with the general file permissions to apply to everyone who has the file.
+                            <ul>
+                                <li><em>r:</em> read</li>
+                                <li><em>w:</em> write</li>
+                                <li><em>x:</em> execute</li>
+                            </ul></li>
+                        <li>Field 5: <em>1</em></li>
+                        <li>Field 6: The owner of the file</li>
+                        <li>Field 7: The group the file belongs to</li>
+                        <li>Field 8 (Number): The size, in bytes, of the file or directory.</li>
+                        <li>Field 9: The date the file was last modified</li>
+                        <li>Field 10: The name of the file or directory</li>
+                    </ol>
+                    <p>It should also be noted that you can pass in a relative or absolute position to display the contents
+                        of other directories.<br>
+                        <i><h4>Examples:</h4></i>
+                    </p>
+                    <pre>$ ls ../</pre>
+                    <p>Display the contents of the parent folder to your current location in the file system.</p>
+                    <pre>$ ls -l /mnt/c/Users/Name/Folder1/</pre>
+                    <p>Display the contents of <em>Folder1</em></p>
+				</div>
+			  </div>
+			</div>
+            <!-- CD -->
+			<div class="card">
+			  <div class="card-header" id="cd">
+				<h5 class="mb-0">
+					<button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseThree">
+						<h4 style="color:black">cd</h4>
+					  </button>
+				</h5>
+			  </div>
+			  <div id="collapseFour" class="collapse" aria-labelledby="cd" data-parent="#accordion">
+				<div class="card-body">
+                    <pre>$ cd \argument</pre>
+                    <p><em>cd</em> allows you to change the directory you are working in by switching to a relative or absolute location in the file system.<br>
+                        <i><h4>Examples:</h4></i>
+                    </p>
+                    <pre>$ cd ../differentFolder/Folder2</pre>
+                    <p>Exit the current folder, enter <em>differentFolder</em>, and proceed to enter <em>Folder2</em> from there.
+                        Set this new location as the working directory.</p>
+                    <pre>$ pwd</pre>
+                    <pre>/mnt/c/Users/Name/differentFolder/Folder2</pre>
+                    <h4>OR:</h4>
+                    <pre>$ cd /mnt/c/Users/Name/differentFolder/Folder2/</pre>
+                    <p>Set the working directory to <em>Folder2</em> from the absolute path.</p>
+                    <pre>$ pwd</pre>
+                    <pre>/mnt/c/Users/Name/differentFolder/Folder2</pre>
+				</div>
+			  </div>
+			</div>
+            <!-- MV -->
+			<div class="card">
+				<div class="card-header" id="mv">
+				  <h5 class="mb-0">
+					  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFour">
+						  <h4 style="color:black">mv</h4>
+						</button>
+				  </h5>
+				</div>
+				<div id="collapseFive" class="collapse" aria-labelledby="mv" data-parent="#accordion">
+					<div class="card-body">
+                        <pre>$ mv fileToMove folderToMove/ ... destination/</pre>
+                        <p>The <em>mv</em> command allows you to move multiple folders or files to a new location in the files system.</p>
+                        <h5>Example File Structure:</h5>
+                        <p>In the following example file structure, <em>exampleFileStructure</em> is the parent directory, and <em>code</em> is
+                        a subdirectory. You can follow which files are housed where based on the tree structure below.</p>
+                        <pre>    exampleFileStructure/
+    ├── code
+    │   ├── displayFileContents.cpp
+    │   ├── inputText
+    │   └── main
+    ├── HelloWorld.txt
+    └── overview.txt</pre>
+                    <p>From this point, you can move around files in the directory.</p>
+                    <i><h4>Examples:</h4></i>
+                    <pre>$ mv HelloWorld.txt overview.txt code/</pre>
+                    <p>Move <em>HelloWorld.txt</em> and  <em>overview.txt</em> into the <em>code</em> directory. With <em>exampleFileStructure</em>
+                    as the working directory (denoted by <em>.</em>), the resulting file tree should be:</p>
+                    <pre>    .
+    └── code
+        ├── displayFileContents.cpp
+        ├── HelloWorld.txt
+        ├── inputText
+        ├── main
+        └── overview.txt</pre>
+                    <p>And if we move the files back:</p>
+                    <pre>$  mv code/HelloWorld.txt code/overview.txt .</pre>
+                    <p>The command will use the relative address from <em>exampleFileStructure</em> to get the files from
+                    the <em>code</em> directory and deposit them into the current working directory (.).</p>
+                    <pre>    .
+    ├── code
+    │   ├── displayFileContents.cpp
+    │   ├── inputText
+    │   └── main
+    ├── HelloWorld.txt
+    └── overview.txt</pre>
+                    </div>
+				</div>
+			  </div>
+		  </div>
+          <!-- CP -->
+		  <div class="card">
+            <div class="card-header" id="cp">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSix" aria-expanded="true" aria-controls="collapseFive">
+                        <h4 style="color:black">cp</h4>
+                    </button>
+                </h5>
+            </div>
+			<div id="collapseSix" class="collapse" aria-labelledby="cp" data-parent="#accordion">
+				<div class="card-body">
+					<pre>$ cp fileToMove folderToMove/ ... destination/</pre>
+                    <p><em>cp</em> works similarly to <em>mv</em>, however, rather than moving files from one place to another, <em>cp</em>
+                    copies the files and moves the copy into the destination folder.</p>
+                    <p>Again, using the same example file structure:</p>
+                    <pre>    exampleFileStructure/
+    ├── code
+    │   ├── displayFileContents.cpp
+    │   ├── inputText
+    │   └── main
+    ├── HelloWorld.txt
+    └── overview.txt</pre>
+                    <h4>Examples:</h4>
+                    <pre>$ cp HelloWorld.txt overview.txt code/</pre>
+                    <p>Copy <em>HelloWorld.txt</em> and  <em>overview.txt</em> into the <em>code</em> directory. With <em>exampleFileStructure</em>
+                        as the working directory (denoted by <em>.</em>), the resulting file tree should be:</p>
+                    <pre>    .
+    ├── code
+    │   ├── displayFileContents.cpp
+    │   ├── HelloWorld.txt
+    │   ├── inputText
+    │   ├── main
+    │   └── overview.txt
+    ├── HelloWorld.txt
+    └── overview.txt</pre>
+				</div>
+			</div>
+		  </div>
+          <!-- TREE -->
+		  <div class="card">
+			<div class="card-header" id="tree">
+			  <h5 class="mb-0">
+				  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSix">
+					  <h4 style="color:black">tree</h4>
+					</button>
+			  </h5>
+			</div>
+			<div id="collapseSeven" class="collapse" aria-labelledby="tree" data-parent="#accordion">
+				<div class="card-body">
+                    <p>The <em>tree</em> command is what generated the file structures seen in the <i>move</i> and <i>copy</i> instruction examples.
+                    The command is an incredibly useful tool for visualizing the structure of a directory, and it may be beneficial when trying
+                    to find the relative location of other files and directories.</p>
+                    <h4>Examples:</h4>
+                    <pre>$ tree</pre>
+                    <pre>    .
+    ├── code
+    │   ├── displayFileContents.cpp
+    │   ├── inputText
+    │   └── main
+    ├── HelloWorld.txt
+    └── overview.txt</pre>
+                    <p><em>tree</em> is also able to accept relative or absolute positions in order to visualize specific directories without displaying
+                    unnecessary information or change the current working directory.</p>
+                    <pre>$ tree code/</pre>
+                    <pre>    code/
+    ├── displayFileContents.cpp
+    ├── inputText
+    └── main</pre>
+				</div>
+			</div>
+		  </div>
+          <!-- CLEAR -->
+		  <div class="card mb-5">
+			<div class="card-header" id="clear">
+			  <h5 class="mb-0">
+				  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEight" aria-expanded="true" aria-controls="collapseSeven">
+					  <h4 style="color:black">clear</h4>
+					</button>
+			  </h5>
+			</div>
+			<div id="collapseEight" class="collapse" aria-labelledby="clear" data-parent="#accordion">
+				<div class="card-body">
+                    <pre>$ clear</pre>
+                    <p>The <em>clear</em> command is used to reduce clutter in the terminal. If you have run many previous commands
+                    or a command has an extensive output that is making future commands difficult to follow, <em>clear</em> can be
+                    used to make it simpler to follow outputs.</p>
+				</div>
+			</div>
+		  </div>
+	  </div>
+    </div>
+
+    <!---->
+    <!-- File Management and manipulation -->
+    <!---->
+    <div class = "container" id = "commands">
+		<a href="#file_system_commands"><h2>Files and Command Chaining</h2></a>
+        <p>The following commands will walk you through how to create and remove files and folders as well test program outputs,
+            chain commands together, and alter file permissions.
+        </p>
+		<div id="accordion">
+            <!-- TOUCH -->
+            <div class="card">
+                <div class="card-header" id="touch">
+                  <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <h4 style="color:black">touch</h4>
+                    </button>
+                  </h5>
+                </div>
+                <div id="collapseOne" class="collapse" aria-labelledby="touch" data-parent="#accordion">
+                  <div class="card-body">
+                   <p>Touch allows users to quickly create files which can be opened in the terminal and altered.
+                       Multiple files can be created using one instance of the command by stringing the desired file names together.
+                       It is important to note that the generated files will, however, be completely empty.
+                   </p>
+                   <pre>$ touch filename.txt file2name.data</pre>
+                   <pre>    .
+    ├── file2name.data
+    └── filename.txt</pre>
+                    <p>Relative and Absolute positions can be passed to the command to create the files in specific locations without
+                        having to change the working directory.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            <!-- MKDIR -->
+			<div class="card">
+			  <div class="card-header" id="mkdir">
+				<h5 class="mb-0">
+				  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+					<h4 style="color:black">mkdir</h4>
+				  </button>
+				</h5>
+			  </div>
+			  <div id="collapseTwo" class="collapse" aria-labelledby="mkdir" data-parent="#accordion">
+				<div class="card-body">
+                    <p><em>mkdir</em> works similarly to <em>touch</em>, with the difference being that <em>mkdir</em>
+                    generates empty directories, rather than empty files. The command accepts the same input parameters as <em>touch</em>,
+                    and folder names can  be strung together to create multiple folders using one instance of the command.</p>
+                    <pre>$ mkdir example1/ example1/example2/</pre>
+                    <pre>    .
+    ├── example1
+    │   └── example2
+    ├── file2name.data
+    └── filename.txt</pre>
+                    <p>The input arguments can also be strung together in ways that create folders inside of folders that were just created. The <em>mkdir</em>
+                    command creates the folders in the order they are specified, so switching the order of the arguments of the example above would not work because
+                    the <em>example1</em> folder would not have been created before trying to generate <em>example1/example2/</em>.</p>
+				</div>
+			  </div>
+			</div>
+            <!-- RM -->
+			<div class="card">
+			  <div class="card-header" id="rm">
+				<h5 class="mb-0">
+					<button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+						<h4 style="color:black">rm</h4>
+					  </button>
+				</h5>
+			  </div>
+			  <div id="collapseThree" class="collapse" aria-labelledby="rm" data-parent="#accordion">
+				<div class="card-body">
+                    <p>The <em>rm</em> command specifies the removal of specific files in a directory.
+                    There are additional flags/arguments you can use to specify the removal of entire directories,
+                    or specify that <b>all</b> files in a directory should be removed without removing the directory itself.</p>
+                    <i><h4>Examples:</h4></i>
+                    <p>The following is the file structure that will be used for these examples.
+                        The file structure will reset after removal command.</p>
+                    <pre>    .
+    ├── example1
+    │   ├── example2
+    │   │   └── file2.txt
+    │   └── file1.txt
+    ├── file2name.data
+    └── filename.txt</pre>
+                    <p>The following command will remove the specified file from the working directory.</p>
+                    <pre>$ rm filename.txt file2name.data</pre>
+                    <pre>    .
+    └── example1
+        ├── example2
+        │   └── file2.txt
+        └── file1.txt</pre>
+                    <p>Additionally, the user can use the <em>*</em> to specify all files that relate to a certain condition.
+                    In the following example that condition is to remove all files which names start with <i>file</i></p>
+                    <pre>$ rm file* </pre>
+                    <pre>    .
+    └── example1
+        ├── example2
+        │   └── file2.txt
+        └── file1.txt</pre>
+                    <p>The following are additional cases of how <em>*</em> can be used to specify specific files.
+                    </p>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Symbol</th>
+                                <th scope="col">What it Removes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>*.txt</td>
+                                <td>Removes all files in the working directory that end with a <i>.txt</i> extension
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>file*name.txt</td>
+                                <td>Removes all text files which names start with <i>file</i> and end with <i>name.txt</i>.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>*</td>
+                                <td>Removes all files, but does not alter directories.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>-r *</td>
+                                <td>Removes everything from the working directory, including all directories and subdirectories.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>An additional argument that should be learned is the <em>-r</em> flag. This specifies that the remove command
+                    should recursively remove files. This is useful if you are trying to remove directories that contain files inside them.
+                    Rather than having to specify all of the files in each subdirectory, the user can specify that all contents of a directory should
+                    be removed recursively.</p>
+                    <pre>$ rm -r example1/</pre>
+                    <p>results in a file structure of:</p>
+                    <pre>    .
+    ├── file2name.data
+    └── filename.txt</pre>
+				</div>
+			  </div>
+			</div>
+            <!-- MORE -->
+			<div class="card">
+			  <div class="card-header" id="more">
+				<h5 class="mb-0">
+					<button class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+						<h4 style="color:black">more</h4>
+					  </button>
+				</h5>
+			  </div>
+			  <div id="collapseFour" class="collapse" aria-labelledby="more" data-parent="#accordion">
+				<div class="card-body">
+                    <pre>$ more filename</pre>
+                    <p><em>more</em> is used to display the contents of a file. This is useful if you are trying to determine which file has specific contents.
+                    Rather than having to open each file in an editor to find what you are looking for, you can use <em>more</em> to quickly see what each file contains.</p>
+				</div>
+			  </div>
+			</div>
+            <!-- HEAD/TAIL -->
+			<div class="card">
+				<div class="card-header" id="head_tail">
+				  <h5 class="mb-0">
+					  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+						  <h4 style="color:black">head/tail</h4>
+						</button>
+				  </h5>
+				</div>
+				<div id="collapseFive" class="collapse" aria-labelledby="head_tail" data-parent="#accordion">
+					<div class="card-body">
+                        <p>Similarly to the <em>more</em> command, head and tail can be used to display the top (head) or bottom (tail) of a file.
+                        The number of lines to display can be specified using the <i>-n</i> argument. It should be noted that the number
+                        of lines does not specify the number of sentences to display, so in a text document, head and tail can cut off sentences.</p>
+                        <pre>$ head -n2 overview.txt</pre>
+                        <pre>    This section will cover common Bash commands that can be used to speed up the code development process.
+    Whether you are working on an individual project or in a large team setting, the Bash commands covered will be useful</pre>
+                        <pre>$ tail -n3 overview.txt</pre>
+                        <pre>    navigate your local file system; manipulate, move, and display file contents and statistics; and interact with
+    file permissions management and remote access systems--for example, scholar.
+                            </pre>
+                        <p><i>The end of the overview document displayed in these examples is a blank line.</i></p>
+                    </div>
+				</div>
+			  </div>
+		  </div>
+          <!-- WC -->
+		  <div class="card">
+			<div class="card-header" id="wc">
+			  <h5 class="mb-0">
+				  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+					  <h4 style="color:black">wc</h4>
+					</button>
+			  </h5>
+			</div>
+			<div id="collapseSeven" class="collapse" aria-labelledby="wc" data-parent="#accordion">
+				<div class="card-body">
+                    <p>When looking for specific statistical information regarding a file and its contents,
+                        <em>wc</em> can be a useful first command to explore. Calling <em>wc</em> on a file will display:</p>
+                        <ol>
+                            <li>The file's line count</li>
+                            <li>The file's word count</li>
+                            <li>The number of characters in the text of the file</li>
+                        </ol>
+                    <pre>$ wc overview.txt</pre>
+                    <pre>    6  83 520 overview.txt</pre>
+
+				</div>
+			</div>
+		  </div>
+          <!-- CHMOD -->
+          <div class="card">
+			<div class="card-header" id="chmod">
+			  <h5 class="mb-0">
+				  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+					  <h4 style="color:black">chmod</h4>
+					</button>
+			  </h5>
+			</div>
+			<div id="collapseNine" class="collapse" aria-labelledby="chmod" data-parent="#accordion">
+				<div class="card-body">
+                    <p>Setting user file permissions may be important if you want to make sure that a file is secure,
+                        cannot be changed, and/or cannot be run without your knowledge. <em>chmod</em> allows users to specify who has
+                        access to, the ability to alter, and the ability to execute specific files in the file system. And these
+                        permissions follow the file in the event that the file is transferred from one computer to another.
+                        It is even possible to revoke permission from your own computer.</p>
+                    </p>
+                    <p>There are a few things that need to make sense before <em>chmod</em> will make sense. There are 3 permissions that
+                    are able to be altered: read (4), write (2), and execute (1). Additionally, there are 3 groups for which permissions can be set:
+                    user (first number), group (second number), and non-group users (third number). In order to set the permissions for each group,
+                    you will run <em>chmod</em> followed by 3 numbers. The first number for the user, the second number for the group, and the third
+                    number for the non-group user. And the number that each of these permissions should be, is the sum of the permissions that you want
+                    to give each group.</p>
+                    <h4><i>Examples:</i></h4>
+                    <p>To give read, write, and execute access: 4 (read) + 2 (write) + 1 (execute) = 7</p>
+                    <p>To give only read and execute access: 4 (read) + 1 (execute) = 5</p>
+                    <p>Now to set the permissions of a file for all three types of user.</p>
+                    <pre>$ chmod 754 overview.txt</pre>
+				</div>
+			</div>
+          </div>
+          <!-- &&, ||, <, > -->
+          <div class="card">
+			<div class="card-header" id="operators">
+			  <h5 class="mb-0">
+				  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+					  <h4 style="color:black">&&, ||, &lt;, &gt;, and &gt;&gt; operators</h4>
+					</button>
+			  </h5>
+			</div>
+			<div id="collapseTen" class="collapse" aria-labelledby="operators" data-parent="#accordion">
+				<div class="card-body">
+                    <p>The <em>&&</em> and <em>||</em> operators are useful for conditionally chaining commands together.
+                    Linking together two commands with <em>&&</em> will run <i><em>command1</em></i>,
+                    then continue onto <em>command2</em> <em>only</em> if <em>command1</em> successfully completes.
+                    And linking together two commands with <em>||</em> will run <i><em>command1</em></i>,
+                    then continue onto <em>command2</em> whether <em>command1</em> successfully completes or proceeds to fail.</p>
+                    <p>Additionally, you can make use of the &lt;, &gt;, and &gt;&gt; operators to pass outputs to and from files and commands.</p>
+					<table class="table">
+						<thead>
+							<tr>
+								<th scope="col">Symbol</th>
+								<th scope="col">What it Does</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>&lt;</td>
+								<td>The &lt; operator can pipe data from one file into an executable, as demonstrated in the examples below.
+									This allows for the automation of testing user input rather than file input. This method does not pass the file to the program, 
+									it passes the <i>contents</i> of the file directly into the terminal when a script requests user inputs.
+								</td>
+							</tr>
+							<tr>
+								<td>&gt;</td>
+								<td>The &gt; operator can pipe data from the executable directly into a file, rather than displaying program outputs into the terminal.
+									This could be useful when using commands that compare program outputs to expected outputs, since piping the program output directly 
+									to a file can allow for the user to use the <em>diff</em> command to compare the output to a pre-existing file.</li>
+								</td>
+							</tr>
+							<tr>
+								<td>&gt;&gt;</td>
+								<td>The &gt;&gt; operator acts similarly to the &gt; operator, with the notable exception that the
+									&gt; will write over a file, and the &gt;&gt; operator will <i>append</i> to a file if you do not
+									want the contents of the current file to ge overwritten.
+								</td>
+							</tr>
+						</tbody>
+					</table>
+
+                    <h4>Examples:</h4>
+                    <p>The following command will compile the <em>displayFileContents.cpp</em> file, and if the compiliation
+                    is successful, then the command will proceed to run the generated executable. Also notice the use of the &lt; operator.</p>
+                    <pre>$ g++ -std=c++17 -Wall -Wshadow -Werror displayFileContents.cpp -o main && ./main &lt; inputText</pre>
+                    <pre>    Value 1 is: 5
+    Value 2 is: 4
+    Value 3 is: 7
+    Value 4 is: 93
+    Value 5 is: 10</pre>
+
+                    <p>If you were to use <em>||</em> in place of <em>&&</em>, it could present issues in the event that compilation fails.</p>
+                    <pre>$ g++ -std=c++17 -Wall -Wshadow -Werror -o main || ./main &lt; inputText</pre>
+                    <pre>    g++: fatal error: no input files
+    compilation terminated.
+    -bash: ./main: No such file or directory</pre>
+                    <p>Rather than displaying the program in the terminal, lets pipe the program a separate file.</p>
+                    <pre>$ g++ -std=c++17 -Wall -Wshadow -Werror displayFileContents.cpp -o main && ./main &lt; inputText &gt; outputText</pre>
+                    <pre>$ more outputText</pre>
+                    <pre>    Value 1 is: 5
+    Value 2 is: 4
+    Value 3 is: 7
+    Value 4 is: 93
+    Value 5 is: 10</pre>
+                    <p>And rather than write over <i>outputText</i>, lets run the program again, but append the output to what is already
+                    in the <i>outputText</i> file.</p>
+                    <pre>$ g++ -std=c++17 -Wall -Wshadow -Werror displayFileContents.cpp -o main && ./main &lt; inputText &gt; outputText</pre>
+                    <pre>$ more outputText</pre>
+                    <pre>    Value 1 is: 5
+    Value 2 is: 4
+    Value 3 is: 7
+    Value 4 is: 93
+    Value 5 is: 10
+    Value 1 is: 5
+    Value 2 is: 4
+    Value 3 is: 7
+    Value 4 is: 93
+    Value 5 is: 10</pre>
+				</div>
+			</div>
+          </div>
+          <!-- DIFF -->
+          <div class="card">
+			<div class="card-header" id="diff">
+			  <h5 class="mb-0">
+				  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+					  <h4 style="color:black">diff</h4>
+					</button>
+			  </h5>
+			</div>
+			<div id="collapseEleven" class="collapse" aria-labelledby="diff" data-parent="#accordion">
+				<div class="card-body">
+                    <p>The <em>diff</em> command allows for the comparison between two files. This is generally useful for comparing outputs of some process to
+                    an expected result. This may be useful in something like unit tests, where you give an input to a function or code, and compare the output (in a file format) to a
+                    pre-existing file containing what the anticipated output.</p>
+                    <h4><i>Examples:</i></h4>
+                    <p>Following entries are example files and their contents.</p>
+                    <pre>HelloWorld.txt</pre>
+                    <pre>    Hello, World!</pre>
+                    <pre>HelloWorld2.txt</pre>
+                    <pre>    Hello, World!</pre>
+                    <pre>overview.txt</pre>
+                    <pre>    This section will cover common Bash commands that can be used to speed up the code development process.
+    Whether you are working on an individual project or in a large team setting, the Bash commands covered will be useful
+    in a variety of settings. The commands you will be learning to work with will allow you to efficiently
+    navigate your local file system; manipulate, move, and display file contents and statistics; and interact with
+    file permissions management and remote access systems--for example, scholar.
+                    </pre>
+                    <p>The following commands demonstrate the results of comparisons between the files.
+                        Any files that are different will result with an output pointing out their differences.
+                        Any files that are the same will not output anything.</p>
+                    <pre>$ diff HelloWorld.txt overview.txt</pre>
+                    <pre>    1c1,6
+    &lt; Hello, World!
+    ---
+    &gt; This section will cover common Bash commands that can be used to speed up the code development process.
+	&gt; Whether you are working on an individual project or in a large team setting, the Bash commands covered will be useful
+	&gt; in a variety of settings. The commands you will be learning to work with will allow you to efficiently
+	&gt; navigate your local file system; manipulate, move, and display file contents and statistics; and interact with
+	&gt; file permissions management and remote access systems--for example, scholar.
+	&gt;</pre>
+                    <pre>$ diff HelloWorld.txt HelloWorld2.txt</pre>
+				</div>
+			</div>
+		  </div>
+	  </div>
+	</div>
+
 	<!-- Footer -->
 	<footer>
 		<div class="container">
