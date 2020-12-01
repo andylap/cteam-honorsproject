@@ -104,7 +104,7 @@
                         <h4>NoSQL</h4>
                         <p>NoSQL denotes a database that is not compatible with SQL, and this corresponds to non-tabular
                             and unstructured databases as well as a data lake. These databases often require data
-                            scientists or software developers to write code to interh4t the data, but some common tools
+                            scientists or software developers to write code to interpret the data, but some common tools
                             to use this style include linq queries and MongoDB among others.</p>
                     </div>
                 </div>
@@ -121,12 +121,12 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="Tabular_Non-tabular" data-parent="#accordion">
                     <div class="card-body">
                         <h4>Tabular</h4>
-                        <p>A tabular database is arranged in tables. It has columns determined by h4defined
+                        <p>A tabular database is arranged in tables. It has columns determined by predefined
                             schema and rows that follow these schema. Each row is a specific instance of the schema, and
                             they are often referred to as records, events, or objects. Tabular databases are compatible
                             with SQL, and they can be contained in something like a csv file.</p>
                         <h4>Non-tabular</h4>
-                        <p>A non-tabular database does not have h4defined schema. Instead of being arranged in a table,
+                        <p>A non-tabular database does not have predefined schema. Instead of being arranged in a table,
                             a non-tabular database typically uses a tier system to organize data. This tier system is
                             typically implemented in something like JSON, XML, BSON, or YAML documents. A database of
                             non-tiered data such as PDF documents or blogs also falls under this umbrella.</p>
@@ -156,13 +156,13 @@
                             of this page, semi-structured and unstructured data will both be referred to as unstructured
                             data. It is common to focus only on the differences between structured databases and
                             everything else because both semi-structured and
-                            unstructured databases require some degree of interh4tation that goes beyond simply working
+                            unstructured databases require some degree of interpretation that goes beyond simply working
                             with tables.</p>
                         <h4>Unstructured</h4>
                         <p>The term unstructured refers to data that does not follow a template at all. This data would
                             be contained in PDF documents, websites, social media posts, or anything where applying a
-                            simple routine for interh4tation would be a challenge. This page will not cover how to use
-                            this type of data much at all because it has to be interh4ted qualitatively or with
+                            simple routine for interpretation would be a challenge. This page will not cover how to use
+                            this type of data much at all because it has to be interpreted qualitatively or with
                             more advanced data science algorithms like natural language processing.
                         </p>
                     </div>
@@ -211,7 +211,7 @@
             <li><strong>Optimized for querying data:</strong> SQL is a mature programming language, and many of its
                 similar alternatives have also been carefully optimized. Tabular data is great when <em>retrieving</em>
                 must be done quickly</li>
-            <li><strong>Easy to interh4t:</strong> Most people have been taught to analyze 2D data in a table since
+            <li><strong>Easy to interpret:</strong> Most people have been taught to analyze 2D data in a table since
                 middle school science and math classes. Professionals can often learn how to use this type of database
                 without much instruction</li>
             <li><strong>Reliable:</strong> Strict typing makes insertion difficult, and this ensures that users
@@ -228,9 +228,9 @@
             database:</p>
         <ul>
             <li><strong>Scalable:</strong> Non-tabular databases scale <em>horizontally</em> whereas tabular databases
-                scale <em>vertically</em>. This allows non-tabular databases to be sh4ad across multiple servers.</li>
+                scale <em>vertically</em>. This allows non-tabular databases to be spread across multiple servers.</li>
             <li><strong>Quick to setup:</strong> One major advantage for non-tabular databases is that raw data without
-                h4defined schema can be inserted. Eliminating the time to plan out schema helps make non-tabular
+                predefined schema can be inserted. Eliminating the time to plan out schema helps make non-tabular
                 databases quick to setup before the specific needs of the data have been determined</li>
             <li><strong>Flexible:</strong> Since there are no specific schema that the data must fit to, non-tabular
                 databases allow for the needs and purpose of a database to change with little overhead. Non-tabular data
@@ -254,7 +254,7 @@
             be maintained between tables of many teachers and many students. The Student schema would simply have a
             teacherId as one of its fields, and keeping this key inside the table would be ACID compliant.</p>
         <p>Providing the opportunity to maintain an ISA relationship is slightly more complicated because each table
-            must have h4defined schema. If the Student and Teacher classes both inherit from a Person class, the
+            must have predefined schema. If the Student and Teacher classes both inherit from a Person class, the
             Student and Teacher would both share the Person qualities. If we keep separate tables for students and
             teachers, the ISA relationship with Person would be lost in our schema. One solution that appears in ERPs is
             to use a a common table but allow only pertinent columns to appear with a given query. For example, there
@@ -271,11 +271,11 @@
             necessary. Even though the ISA relationship is more intuitive, it is much more efficient to keep a HASA
             relationship.</p>
         <h3>Non-tabular</h3>
-        <p>The tag-element relationship h4sent in semi-structured data is the most clear connection between non-tabular
+        <p>The tag-element relationship present in semi-structured data is the most clear connection between non-tabular
             data and object-oriented programming. For the project in ECE 39595, the input was an XML document that the
             program parsed. The parser used the tags to understand the type of objects it was reading in and what
-            attributes were associated with those objects. While the XML document did not have any h4defined schema,
-            the program could interh4t its data to map it to the classes that it had defined.</p>
+            attributes were associated with those objects. While the XML document did not have any predefined schema,
+            the program could interpret its data to map it to the classes that it had defined.</p>
         <p>Since all data in a non-tabular database is self-contained, there are more options available for a HASA
             relationship. The same Teacher-Student example could be formatted in a JSON document where the Student still
             has an attribute marking a unique key for its teacher. Teachers could also contain arrays of students
