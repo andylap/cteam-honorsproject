@@ -1,76 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>OOP Cheat Sheet | ECE 39595 Knowledgebase</title>
-	<link rel="shortcut icon" href="img/favicon.ico">
-	<!-- Bootstrap 4.5 CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!-- Style CSS -->
-	<link rel="stylesheet" href="css/style.css">
-	<!-- Purdue Fonts -->
-	<link href="https://www.purdue.edu/purdue/fonts/united-sans/united-sans.css" rel="stylesheet" />
-	<link href="https://use.typekit.net/ghc8hdz.css" rel="stylesheet" />
+    <title>OOP Cheat Sheet | ECE 39595 Knowledgebase</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Bootstrap 4.5 CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Purdue Fonts -->
+    <link href="https://www.purdue.edu/purdue/fonts/united-sans/united-sans.css" rel="stylesheet" />
+    <link href="https://use.typekit.net/ghc8hdz.css" rel="stylesheet" />
 </head>
 <body>
-	<!-- Navigation -->
-	<nav class="navbar fixed-top bg-light navbar-light">
-		<div class="container">
-			<a href="index.html" class="navbar-brand">ECE 39595 Knowledgebase</a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+    <!-- Navigation -->
+    <nav class="navbar fixed-top bg-light navbar-light">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">ECE 39595 Knowledgebase</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav mx-auto">
-					<li class="nav-item"><a href="setup.html" class="nav-link">Setup</a></li>
-					<li class="nav-item"><a href="git.html" class="nav-link">Using Git</a></li>
-					<li class="nav-item"><a href="databases.html" class="nav-link">Databases</a></li>
-					<li class="nav-item"><a href="tools.html" class="nav-link">Software Tools</a></li>
-					<li class="nav-item"><a href="standards.html" class="nav-link">Coding Standards</a></li>
-					<li class="nav-item"><a href="agilescrum.html" class="nav-link">Agile/Scrum</a></li>
-					<li class="nav-item"><a href="careers.html" class="nav-link">Professional Development</a></li>
-					<li class="nav-item"><a href="dynamicprogramming.html" class="nav-link">Dynamic Programming</a></li>
-					<li class="nav-item"><a href="cheatsheet.html" class="nav-link active">OOP Cheat Sheet</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a href="setup.html" class="nav-link">Setup</a></li>
+                    <li class="nav-item"><a href="git.html" class="nav-link">Using Git</a></li>
+                    <li class="nav-item"><a href="databases.html" class="nav-link">Databases</a></li>
+                    <li class="nav-item"><a href="tools.html" class="nav-link">Software Tools</a></li>
+                    <li class="nav-item"><a href="standards.html" class="nav-link">Coding Standards</a></li>
+                    <li class="nav-item"><a href="agilescrum.html" class="nav-link">Agile/Scrum</a></li>
+                    <li class="nav-item"><a href="interviews.html" class="nav-link">Technical Interviews</a></li>
+                    <li class="nav-item"><a href="dynamicprogramming.html" class="nav-link">Dynamic Programming</a></li>
+                    <li class="nav-item"><a href="cheatsheet.html" class="nav-link active">OOP Cheat Sheet</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-	<!-- Page Content -->
-	<div class="container mt-5" id="title">
-		<h1 class="pt-4">OOP Cheat Sheet</h1>
-	</div>
-	
-	<div class="container" id="overview">
-		<a href="#overview"><h2>Overview</h2></a>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, libero ratione. Quos, doloremque corrupti alias esse itaque voluptates odio. Consequuntur modi corporis officiis suscipit impedit nihil ratione voluptatem voluptates eum.</p>
-	</div>
+    <!-- Page Content -->
+    <div class="container mt-5" id="title">
+        <h1 class="pt-4">Object-Oriented Programming Principles</h1>
+    </div>
 
-	<!-- Footer -->
-	<footer>
-		<div class="container">
-			<div class="row text-light text-center py-4 justify-content-center">
-				<div class="col-sm-10 col-md-8 col-lg-6">
-					<a href="index.html" style="font-weight: 700; font-size: 1.5rem; text-transform: uppercase;">ECE 39595 Knowledgebase</a>
-					<p>Honors Project for <a href="https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=579&show=true&type=undergrad">ECE 39595</a> (Object-Oriented Programming using C++ and Java) at <a href="https://purdue.edu">Purdue University</a> for Fall 2020.</p>
-				</div>
-			</div>
-		</div>
-	</footer>
+    <div class="container" id="overview">
+        <a href="#overview"><h2>Overview</h2></a>
+        <p>Object-Oriented Programming is a paradigm that most, if not all, developers first learn when starting their journey into programming. While it's not perfect, it's a tried and tested approach to writing a clean, well structured, and highly reusable codebase. That's what all programming paradigms and approaches aim to do: reduce code for the ease of expansion and maintenance, ensure separation of concerns, and ensure code reusability.</p>
+            
+        <p>
+        When it comes to object-oriented programming, there are 4 main principles:
+        <a href="#encapsulation"><li>Encapsulation</li></a>
+        <a href="#abstraction"><li>Abstraction</li></a>
+        <a href="#inheritance"><li>Inheritance</li></a>
+        <a href="#polymorphism"><li>Polymorphism</li></a>
+        </p>
+        
+        <p>
+        Let's dive in and find out what all of these mean! Along the way, we'll be using the features of cars and trucks to help illustrate these principles.
+        </p>
+        
+    </div>
+    
+    <br>
 
-	<!-- Script Source Files -->
+    <div class="container" id="encapsulation">
+        <a href="#encapsulation"><h2>Encapsulation</h2></a>
+        
+        <p>The whole point of encapsulation is to privatize the state and to publicize methods. What the heck does that mean, you might ask? Let's take the car example. If you were a car manufacturer, you wouldn't want the end-customer to have direct functionality to mutate (change) or access the odometer. Instead, you'd only want that information to be read-only. As a result, you might create a button on the navigation display that will then display a pop-up with the number of miles driven. Similarly, you wouldn't ever just let them change the speedometer. Instead, you would provide methods (or ways) for these states (or properties) to be mutated. Let's look at an example.</p>
+        
+        <h3>Step 1: Define Private State Properties</h3>
+        <p>First, let's define some (private) state variables for all cars. These properties will access the values associated with important car properties. For example, these class properties might define miles driven, miles driven, speed of travel, the gear currently engaged, last inspection date, etc. By holding these properties in private state variables, we have a specific and known location where we can always access these critical values. As such, we want them to be private to ensure that no one accidentally (or intentionally) changes these values in an unexpected or harmful way.</p>
+        <script src="https://gist.github.com/cpisciotta/2afaae8cc7a9d23fc97203c15b9cd555.js"></script>
+        
+        <h3>Step 2: Define Private Methods</h3>
+        <p>Now let's define some of the private methods that we'll invoke occasionally. Notice that these are private. This means that they can only be invoked within the class. This is because we don't want to grant anyone else the ability to call these methods. This is generally done to prevent errors. It helps us ensure that these methods aren't being called at unexpected times or being forgotten.</p>
+        <script src="https://gist.github.com/cpisciotta/c37a23436115862385abb66b7c85cc8f.js"></script>
+        
+        <h3>Step 3: Define Public Methods</h3>
+        <p>Lastly, let's define some publicly accessible methods that will let others use our car. We'll make these public because we want others to be able to update the private state variables in a controlled and expected manner.</p>
+        <script src="https://gist.github.com/cpisciotta/90d66988819f65a543287e326717d466.js"></script>
+        
+        <h3>TLDR</h3>
+        <p>By specifying the access level of the properties and methods of a class, we're able to control the ways in which others interact with our class's data. As a result, we'll hide the values themselves and expose ways to retrieve and update those values through public methods.</p>
+        <script src="https://gist.github.com/cpisciotta/72a8dabe8a4c4e95590e703c3481b8bb.js"></script>
+    </div>
+    
+    <br>
+    
+    <div class="container" id="abstraction">
+        <a href="#abstraction"><h2>Abstraction</h2></a>
+        <p>Abstraction lets us hide the implementation details of our code to outsiders. Sometimes you'll hear others refer to this as the "black box" principle. This essentially exposes a method to others without explaining how it's written.</p>
+        
+        <p>Still, confused? Think about your TV. Instead of telling you all the steps needed to produce video, the manufacturer provides a remote with a button (or method) to turn the TV on and off. This ensures that the user doesn't need to invoke all of the necessary subprocesses, let alone in the right order, to complete the task of turning the TV on and off.</p>
+        
+        <p>Let's drive this point home with the Car class example again.</p>
+        
+        
+        <p>First, we'll define in our method just some of these processes that might occur when you fill up your gas tank. Perhaps while you're reading this, you're realizing things that might happen behind the scenes that you never thought of. That's exactly why abstraction is great- it takes away the need to worry about the underlying details that make everything go smoothly.</p>
+        <script src="https://gist.github.com/cpisciotta/0ec865de6930167cf9a446286b40c147.js"></script>
+        
+        <p>Now that we've defined our method, let's call it. Notice that it's just a simple call on our Car class instance. With just that simple line we're able to call all of the subprocesses that together let us fill up the tank without error every time. Also notice that we don't let others invoke only a subroutine. Congrats, now you know what abstraction is!</p>
+        <script src="https://gist.github.com/cpisciotta/f97a807e6512448760d5454365dcc100.js"></script>
+    </div>
 
-	<!-- jQuery -->
-	<script src="js/jquery-3.5.1.min.js"></script>
-	<!-- Bootstrap 4.5 JS -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Popper JS -->
-	<script src="js/popper.min.js"></script>
-	<!-- Font Awesome -->
-	<script src="js/all.min.js"></script>
+    <br>
+    
+    <div class="container" id="inheritance">
+        <a href="#inheritance"><h2>Inheritance</h2></a>
+        <p>Inheritance is the heart and soul of OOP. Essentially this principle allows us to reuse code among related classes. It gives us a way to structure code hierarchically. Additionally, it allows us to indicate relationships among classes, such as parents, children, and sibling classes. What the heck does all this mean? Let's go straight into the code to get a better understanding.</p>
+        
+        <h3>Step 1: Define a Parent Class</h3>
+        <p>First, we'll define a parent class. This will be the universal class that all subclasses (or child classes) will have direct and automatic access to. In our previous examples, we've classified our properties and methods as features of a car. However, now we're looking at the bigger picture and realize that these are properties of a vehicle (i.e. it can apply to a motorcycle and truck, too). So let's adjust our code to define a generic vehicle instead. Notice that all of the properties and methods have definitions.</p>
+        <script src="https://gist.github.com/cpisciotta/1afe3d133f68018a9dc0771340068c8a.js"></script>
+        
+        <h3>[Optional] Step 2: Declare an Interface (or Protocol)</h3>
+        <p>Now let's define any interfaces (or protocols) that might apply to vehicles. Why an interface? Let's take the example of an electric car. If we were to define the "layers" of an electric vehicle, we'll quickly identify that it's a vehicle. However, our Vehicle parent class does not mention anything about being electric capabilities. This helps us ensure the best reusability without adding features irrelevant to some child classes. Instead, we'll declare an ElectricCapable interface that can be inherited by only vehicles with electric capabilities. Instead of defining how the extra properties and methods of electric car work, we'll just indicate (with an interface) that we want those properties and methods defined, but we'll leave it up to the inheriting class to do the work for us.</p>
+        <script src="https://gist.github.com/cpisciotta/6345cc58b38ee82636cfb44523c8b1e5.js"></script>
+        
+        <h3>Step 3: Create a Subclass</h3>
+        <p>Now, let's define a child class that inherits a parent class. For this example, let's define a Tesla class. This will allow us to inherit the Vehicle class. Additionally, given the electric capabilities of a Tesla, we'll inherit the ElectricCapable interface (or protocol). That will help us add the additional features that a generic car doesn't always have. You'll notice that none of the vehicle methods or properties are in the Tesla class. That's because all of the non-private properties and methods are automatically part of all Tesla instances. As a result, we've saved ourselves a ton of work and created very reusable code in the Vehicle class.</p>
+        <script src="https://gist.github.com/cpisciotta/f3129ad95a89870bb17bd3f02c361a43.js"></script>
+        
+        <h3>Try It Yourself!</h3>
+        <p>After taking a look at the code above, try implementing this yourself with a Truck class. Think of different classes and interfaces that you might be able to implement.</p>
+            
+        <p>Furthermore, subclassing is not always limited to just a parent class. Sometimes we can create multiple layers of subclasses. Think about how we could create an ElectricVehicle class and then instead have Tesla only inherit ElectricVehicle.</p>
+    </div>
+    
+    <br>
 
-	<!-- End Script Source Files -->
+    <div class="container" id="polymorphism">
+        <a href="#polymorphism"><h2>Polymorphism</h2></a>
+        <p>Polymorphism in Greek translates to "many forms." Given this, we can start thinking about how that idea might apply to OOP. Let's think about our vehicle example in the context of cars and trucks. More specifically, let's take a look at a vehicle's ability to accelerate. From experience, you probably know that cars are able to accelerate faster than trucks. Now let's keep this information in mind when defining our Vehicle subclasses. Knowing that our cars and trucks will accelerate at different speeds, do we want to define in our Vehicle class the speed at which all vehicles will accelerate? Instead, why don't we define an interface called Driveable. When a class inherits Driveable (i.e. a car, motorcycle, or truck), we'll let that subclass define the accelerate function. This will ensure that each different type of vehicle updates the speed property of a car correctly.</p>
+        
+        <h3>Step 1: Define an Interface</h3>
+        <p>First, let's define the Driveable interface that will define the rules (the properties and methods) that all Driveable classes must implement.</p>
+        <script src="https://gist.github.com/cpisciotta/bcff04308d8920ab4101ebac2e9a2c33.js"></script>
+        
+        <h3>Step 2: Inherit the Interface</h3>
+        <p>Given that all cars meet the requirements to inherit the Driveable interface, let's go ahead and inherit the interface in a Car class. Afterward, we'll need to define the methods in Driveable.</p>
+        <script src="https://gist.github.com/cpisciotta/9c08974600b0c9bbfd99b9ee5b36453c.js"></script>
+        
+        <p>Knowing that trucks also meet the requirements, we'll inherit the Driveable interface here, too. However, knowing that a truck behaves differently, we'll define the accelerate and decelerate methods differently.</p>
+        <script src="https://gist.github.com/cpisciotta/6dc8fab20a12fee509eeaf32c3bf7404.js"></script>
+        
+        <p>You'll notice that these two subclasses are nearly identical. However, they've uniquely defined the accelerate and decelerate methods, while still adhering to the Driveable requirements. At the same time, we've been able to maintain the same method name that can be invoked without always knowing if it's for a Car or Truck class.</p>
+        
+        <h3>Try It Yourself</h3>
+        <p>Take a look at some of the ways polymorphism applies to class inheritance. See if you can identify how subclasses can override parent class methods to uniquely implement them for a specific use-case. Think about how overriding a parent class method might be more beneficial than implementing the method(s) of an interface.</p>
+    </div>
+    
+    <div class="container" id="polymorphism">
+        <h2>Conclusion</h2>
+        <p>That's all for this edition. You should now be able to explain and identify the 4 foundational principles of Object-Oriented Programming.</p>
+        
+        <p>Take a look at some of these links to learn and read more!</p>
+        
+        <a href="https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/#:~:text=The%20four%20principles%20of%20object,scary%20for%20a%20junior%20developer."><li>How to explain object-oriented programming concepts to a 6-year-old</li></a>
+
+        <a href="https://www.youtube.com/watch?v=CWYv7xlKydw"><li>Learn Java OOP in 10 minutes (seriously)</li></a>
+
+        <a href="https://medium.com/@cancerian0684/what-are-four-basic-principles-of-object-oriented-programming-645af8b43727"><li>What are four basic principles of Object Oriented Programming?</li></a>
+        
+    </div>
+
+    <br>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row text-light text-center py-4 justify-content-center">
+                <div class="col-sm-10 col-md-8 col-lg-6">
+                    <a href="index.html" style="font-weight: 700; font-size: 1.5rem; text-transform: uppercase;">ECE 39595 Knowledgebase</a>
+                    <p>Honors Project for <a href="https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/CourseInfo/courseInfo?courseid=579&show=true&type=undergrad">ECE 39595</a> (Object-Oriented Programming using C++ and Java) at <a href="https://purdue.edu">Purdue University</a> for Fall 2020.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script Source Files -->
+
+    <!-- jQuery -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap 4.5 JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Popper JS -->
+    <script src="js/popper.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="js/all.min.js"></script>
+
+    <!-- End Script Source Files -->
 </body>
