@@ -33,7 +33,7 @@
                     <li class="nav-item"><a href="agilescrum.html" class="nav-link">Agile/Scrum</a></li>
                     <li class="nav-item"><a href="interviews.html" class="nav-link">Technical Interviews</a></li>
                     <li class="nav-item"><a href="dynamicprogramming.html" class="nav-link">Dynamic Programming</a></li>
-                    <li class="nav-item"><a href="cheatsheet.html" class="nav-link active">OOP Cheat Sheet</a></li>
+                    <li class="nav-item"><a href="principles.html" class="nav-link active">OOP Principles</a></li>
                 </ul>
             </div>
         </div>
@@ -50,19 +50,20 @@
             
         <p>
         When it comes to object-oriented programming, there are 4 main principles:
-        <a href="#encapsulation"><li>Encapsulation</li></a>
-        <a href="#abstraction"><li>Abstraction</li></a>
-        <a href="#inheritance"><li>Inheritance</li></a>
-        <a href="#polymorphism"><li>Polymorphism</li></a>
         </p>
+        <ol>
+            <li><a href="#encapsulation">Encapsulation</a></li>
+            <li><a href="#abstraction">Abstraction</a></li>
+            <li><a href="#inheritance">Inheritance</a></li>
+            <li><a href="#polymorphism">Polymorphism</a></li> 
+        </ol>
         
         <p>
         Let's dive in and find out what all of these mean! Along the way, we'll be using the features of cars and trucks to help illustrate these principles.
         </p>
         
     </div>
-    
-    <br>
+
 
     <div class="container" id="encapsulation">
         <a href="#encapsulation"><h2>Encapsulation</h2></a>
@@ -81,12 +82,10 @@
         <p>Lastly, let's define some publicly accessible methods that will let others use our car. We'll make these public because we want others to be able to update the private state variables in a controlled and expected manner.</p>
         <script src="https://gist.github.com/cpisciotta/90d66988819f65a543287e326717d466.js"></script>
         
-        <h3>TLDR</h3>
+        <h3>TL;DR</h3>
         <p>By specifying the access level of the properties and methods of a class, we're able to control the ways in which others interact with our class's data. As a result, we'll hide the values themselves and expose ways to retrieve and update those values through public methods.</p>
         <script src="https://gist.github.com/cpisciotta/72a8dabe8a4c4e95590e703c3481b8bb.js"></script>
     </div>
-    
-    <br>
     
     <div class="container" id="abstraction">
         <a href="#abstraction"><h2>Abstraction</h2></a>
@@ -103,8 +102,6 @@
         <p>Now that we've defined our method, let's call it. Notice that it's just a simple call on our Car class instance. With just that simple line we're able to call all of the subprocesses that together let us fill up the tank without error every time. Also notice that we don't let others invoke only a subroutine. Congrats, now you know what abstraction is!</p>
         <script src="https://gist.github.com/cpisciotta/f97a807e6512448760d5454365dcc100.js"></script>
     </div>
-
-    <br>
     
     <div class="container" id="inheritance">
         <a href="#inheritance"><h2>Inheritance</h2></a>
@@ -127,8 +124,6 @@
             
         <p>Furthermore, subclassing is not always limited to just a parent class. Sometimes we can create multiple layers of subclasses. Think about how we could create an ElectricVehicle class and then instead have Tesla only inherit ElectricVehicle.</p>
     </div>
-    
-    <br>
 
     <div class="container" id="polymorphism">
         <a href="#polymorphism"><h2>Polymorphism</h2></a>
@@ -151,21 +146,17 @@
         <p>Take a look at some of the ways polymorphism applies to class inheritance. See if you can identify how subclasses can override parent class methods to uniquely implement them for a specific use-case. Think about how overriding a parent class method might be more beneficial than implementing the method(s) of an interface.</p>
     </div>
     
-    <div class="container" id="polymorphism">
-        <h2>Conclusion</h2>
+    <div class="container mb-5" id="conclusion">
+        <a href="#conclusion"><h2>Conclusion</h2></a>
         <p>That's all for this edition. You should now be able to explain and identify the 4 foundational principles of Object-Oriented Programming.</p>
         
         <p>Take a look at some of these links to learn and read more!</p>
-        
-        <a href="https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/#:~:text=The%20four%20principles%20of%20object,scary%20for%20a%20junior%20developer."><li>How to explain object-oriented programming concepts to a 6-year-old</li></a>
-
-        <a href="https://www.youtube.com/watch?v=CWYv7xlKydw"><li>Learn Java OOP in 10 minutes (seriously)</li></a>
-
-        <a href="https://medium.com/@cancerian0684/what-are-four-basic-principles-of-object-oriented-programming-645af8b43727"><li>What are four basic principles of Object Oriented Programming?</li></a>
-        
+        <ul>
+            <li><a href="https://www.freecodecamp.org/news/object-oriented-programming-concepts-21bb035f7260/#:~:text=The%20four%20principles%20of%20object,scary%20for%20a%20junior%20developer.">How to explain object-oriented programming concepts to a 6-year-old</a></li>
+            <li><a href="https://www.youtube.com/watch?v=CWYv7xlKydw">Learn Java OOP in 10 minutes (seriously)</a></li>
+            <li><a href="https://medium.com/@cancerian0684/what-are-four-basic-principles-of-object-oriented-programming-645af8b43727">What are four basic principles of Object Oriented Programming?</a></li>
+        </ul>
     </div>
-
-    <br>
     
     <!-- Footer -->
     <footer>
