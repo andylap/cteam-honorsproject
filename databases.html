@@ -185,36 +185,6 @@
 
     </div>
 
-    <div class="container" id="Advantages">
-        <a href="#advantages"><h2>Advantages</h2></a>
-        <h4>Tabular</h4>
-        <p>Tabular databases are typically used when data is atomic (cannot be broken in to smaller units), consistent (each record follows the same schema), isolated (each event or object is independent of the others), and durable (it is important that the data is not lost even in the case of a power outage). This refers to ACID compliance. Tabular databases are commonly used in applications such as CRMs, ERPs, and student records. Checkout the key benefits of using a tabular database:</p>
-        <ul>
-            <li><strong>Optimized for querying data:</strong> SQL is a mature programming language, and many of its similar alternatives have also been carefully optimized. Tabular data is great when <em>retrieving</em> must be done quickly</li>
-            <li><strong>Easy to interperet:</strong> Most people have been taught to analyze 2D data in a table since middle school science and math classes. Most professionals can learn how to use this type of database without much instruction</li>
-            <li><strong>Reliable:</strong> Strict typing makes insertion difficult, and this ensures users that they know exaclty what it is in their database, and these databases are perfect where every record is significant due to their robustness. Moreover, tabular databses have the advantage of being a mature technology with an abundance of reseources to help users.</li>
-        </ul>
-        <h4>Non-tabular</h4>
-        <p>Non-tabular databses are typically used when data is basically available (the database is generally usable but may go down), soft state (data may change over time), and eventaully consistent (system will eventaully become consistent over time), and this refers to BASE compliance. Non-tabular databases are used for data like article content, social media posts, and sensor data. Checkout the key benefits of using a non-tabular database:</p>
-        <ul>
-            <li><strong>Scalable:</strong> non-tabular databases scale <em>horizontally</em> whereas tabular databases scale <em>vertically</em>. This allows non-tabular databases to be spread across multiple servers.</li>
-            <li><strong>Quick to setup:</strong> One major advantage for non-tabular databases is that raw data without predefined schema can be inserted. Eliminating the time to plan out schema helps make non-tabular databases quick to setup before the specific needs of the data have been determined</li>
-            <li><strong>Flexible:</strong> Since there are no specific schema that the data must fit to, non-tabular databases allow for the needs and purpose of a database to change with little overhead. Non-tabular data pairs often pairs well with agile development in the early stages of the project- check ou our section on agile/scrum methodologies to learn more!</li>
-        </ul>
-    </div>
-
-    <div class="container mb-5" id="oop">
-        <a href="#oop"><h2>Connection to Object-Oriented Programming</h2></a>
-        <h4>Tabular</h4>
-        <p>The most clear connect between tabular databases and object-oriented programming lies in the definition of schema. The schema used to define a table are analogous to the attributes of a class, and an even clearer connection can be drawn between a struct. A struct is similar to a class except it does not have any methods. A <em>structured</em> database is essentially a collection of <em>struct</em> instances.</p>
-        <p>Another parallel can be drawn between relations between table keys and HASA relationships. For example, a program that keeps track of two classes, teachers and students, could have a HASA relationship between students an their teachers where each student has a teacher attribute. A similar relationship could easily be maintained between tables of many teachers and many students. The student schema would simply have a teacherId as one of its fields, and keeping this key inside the table would maintain ACID compliant.</p>
-        <p>Providing the opportunity to maintain an ISA relationship is slightly more complicated because each table must have predefined schema. If the student and teacher classes both inherit from a Person class, the student and teacher would both share the Person qualities. If we kept separate tables for students and teachers, the ISA relationship with Person would be lost in our schema. One solution that appears in ERPs is to use a a common table but allow only pertinent columns to appear with a given query. For example, there could be a person table with 15 columns: the first five correspond to Person attributes, the next five correspond to Teacher attributes, and the last five correpsond to Student attributes. Then, a query for the Person schema can only see the first five, a query for the Teacher schema can only see teh first ten, and a query for the Student schema can only see the first or last five. This solution is complicated, however, and results in space inefficiencies.</p>
-        <p>Connecting classes to schema emphasizes that it is important to favor a HASA relationship over an ISA relationship. In the Person, Student, Teacher program, the Student schema and the Teacher schema can both encapsulate the Person Schema. Then, each schema can once again have its own table, but the Student and Person tables will reference their corresponding record in the Person schema only when and if that data is necessary. Even though the ISA relationship is more intuitive, it is much more efficient to keep a HASA relationship.</p>
-        <h4>Non-tabular</h4>
-        <p>The tag-element relationship present in semi-structured data is the most clear connection between non-tabular data and object-oriented programming. For the project for ECE 39595, the input was an XML document that the program parsed. The parser used the tages to understand the type of objects that it was reading in and what attributes were associated with those objects. While the XML document did not have any predefined schema, the program could interpret its data to map it to the classes that it had defined.</p>
-        <p>Since all data in a non-tabular database is self-contained, there are more options available for a HASA relationship. The same Teacher-Student example could be formatted in a JSON document where the Student still has an attribute marking a unique key for its teacher. Teachers could also contain arrays of students whereas that would not have been possible with tabular data.</p>
-        <p>ISA relationships are also easier with non-tabular data because of the flexibility that this style provides. The attributes of any object can vary, and that is not an issue because they are all contained in tag-element pairs. This means that a YAML document could have any number of Person objects, and each object that was a Teacher would have Teacher tags, and each Student object would have Student tags.</p>
-    </div>
 
     <div class="container" id="sources">
         <a href="#sources"><h2>Sources</h2></a>
